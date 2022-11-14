@@ -167,6 +167,7 @@ html {
 
 .menu .social-network ul li {
     margin: 0 3px;
+
 }
 
 .menu .social-network ul li a {
@@ -675,13 +676,16 @@ figure.snip1321.hover:after {
     text-decoration: none;
     color: white;
     font-size: 30px;
-    padding: 20px;
+    padding: 20px 25px;
     transition: .4s;
+    border: 2px solid #B0A295;
+    border-radius: 8px;
 }
 
 .social-network-main ul li a i:hover{
-    color: #B57D82;
+    color: #8c363e;
     transition: .4s;
+    background-color: #B0A295;
 }
 #contact input {
     background-color: rgba(250,250,250,0.1);
@@ -728,6 +732,7 @@ figure.snip1321.hover:after {
     font-size: 20px;
     text-decoration: none;
     color: #FCCD12;
+
 }
 .project-links:hover{
     text-decoration: none;
