@@ -13,7 +13,7 @@ body {
 }
 
 #page-wraper {
-    background: url(../images/page-bg.jpg) no-repeat center center fixed;
+    background: url(../images/walk-anime.gif) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -125,7 +125,9 @@ html {
     border-top: 2px solid #fff;
 }
 
-.main-nav li:hover a,
+.main-nav li:hover a{
+    background: #5D5C60;
+}
 .main-nav li.active a {
     background: #fff;
     color: #8c363e;
@@ -154,9 +156,9 @@ html {
 }
 
 .menu .author-content span {
-    font-size: 15px;
+    font-size: 20px;
     font-style: italic;
-    color: #5D5C60;
+    color: #454448;
 }
 
 .menu .social-network {
@@ -178,6 +180,7 @@ html {
     color: #fff;
     font-size: 50px;
     transition: all 0.5s;
+    border-radius: 4px;
 }
 
 .menu .social-network ul li a:hover {
@@ -298,6 +301,8 @@ html {
     min-height: 100vh;
     padding-bottom: 80px;
     border-bottom: 3px solid rgba(250, 250, 250, 0.25);
+    background-color: #23232380;
+    border-radius: 50px;
 }
 
 .section-heading {
@@ -718,6 +723,17 @@ figure.snip1321.hover:after {
 #contact {
     text-align: center;
 }
+
+.project-links{
+    font-size: 20px;
+    text-decoration: none;
+    color: #FCCD12;
+}
+.project-links:hover{
+    text-decoration: none;
+    color: #FFDF01;
+}
+
 
 @media screen and (max-width: 1680px) {
     .menu {
