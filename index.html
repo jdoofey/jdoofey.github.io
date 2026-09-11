@@ -1,574 +1,979 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <meta name="description" content="" />
-  <meta name="author" content="" />
-  <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet" />
-  <title>Jake Matillano</title>
-  <link rel="shortcut icon" type="image/png" href="/favicon.png"/>  <!--
-Reflux Template
-https://templatemo.com/tm-531-reflux
--->
-  <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jake Matillano | Technical Operations Portfolio</title>
+  <meta name="description" content="Jake Matillano portfolio: technical operations, service desk leadership, knowledge management, training enablement, AI workflow documentation, and software development foundation." />
+  <style>
+    :root {
+      --bg: #070a13;
+      --bg-2: #0d1326;
+      --card: rgba(255, 255, 255, 0.075);
+      --card-2: rgba(255, 255, 255, 0.105);
+      --text: #f5f8ff;
+      --muted: #aebbd5;
+      --muted-2: #d7e2f7;
+      --line: rgba(255,255,255,0.14);
+      --purple: #8b5cf6;
+      --blue: #38bdf8;
+      --green: #22c55e;
+      --orange: #f59e0b;
+      --shadow: 0 28px 90px rgba(0,0,0,.36);
+      --radius-xl: 30px;
+      --radius-lg: 20px;
+      --radius-md: 14px;
+      --max: 1120px;
+    }
 
-  <!-- Additional CSS Files -->
-  <link rel="stylesheet" href="assets/css/fontawesome.css" />
-  <link rel="stylesheet" href="assets/css/templatemo-style.css" />
-  <link rel="stylesheet" href="assets/css/owl.css" />
-  <link rel="stylesheet" href="assets/css/lightbox.css" />
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 15% 8%, rgba(139, 92, 246, .35), transparent 30%),
+        radial-gradient(circle at 86% 12%, rgba(56, 189, 248, .24), transparent 27%),
+        radial-gradient(circle at 78% 75%, rgba(34, 197, 94, .12), transparent 28%),
+        linear-gradient(135deg, var(--bg) 0%, #0a0f1f 43%, var(--bg-2) 100%);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    a { color: inherit; }
+
+    .page {
+      width: min(var(--max), calc(100% - 36px));
+      margin: 0 auto;
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(18px);
+      background: rgba(7, 10, 19, .76);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav-inner {
+      width: min(var(--max), calc(100% - 36px));
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 14px 0;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      text-decoration: none;
+      font-weight: 900;
+      letter-spacing: -.02em;
+    }
+
+    .brand-mark {
+      width: 35px;
+      height: 35px;
+      border-radius: 13px;
+      background: linear-gradient(135deg, var(--purple), var(--blue));
+      box-shadow: 0 14px 34px rgba(139,92,246,.33);
+      position: relative;
+    }
+
+    .brand-mark::after {
+      content: "";
+      position: absolute;
+      inset: 8px;
+      border-radius: 8px;
+      border: 1px solid rgba(255,255,255,.5);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      padding: 8px 11px;
+      border-radius: 999px;
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+      background: rgba(255,255,255,.09);
+    }
+
+    .hero {
+      padding: 84px 0 44px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.25fr .75fr;
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .hero-card {
+      background: linear-gradient(135deg, rgba(255,255,255,.12), rgba(255,255,255,.052));
+      border: 1px solid var(--line);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow);
+      padding: clamp(30px, 5vw, 56px);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      width: 360px;
+      height: 360px;
+      right: -130px;
+      bottom: -170px;
+      background: radial-gradient(circle, rgba(56,189,248,.28), transparent 68%);
+      pointer-events: none;
+    }
+
+    .eyebrow {
+      color: #d9ccff;
+      font-weight: 900;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      font-size: 12px;
+      margin-bottom: 14px;
+    }
+
+    h1, h2, h3 { line-height: 1.08; margin: 0; }
+
+    h1 {
+      font-size: clamp(42px, 7.3vw, 76px);
+      letter-spacing: -0.065em;
+      max-width: 850px;
+    }
+
+    .gradient-text {
+      background: linear-gradient(90deg, #ffffff, #d9ccff 40%, #9be7ff);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero-copy {
+      max-width: 760px;
+      color: var(--muted);
+      font-size: clamp(17px, 2vw, 21px);
+      margin: 22px 0 0;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      text-decoration: none;
+      border-radius: 999px;
+      padding: 12px 16px;
+      font-weight: 900;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.08);
+    }
+
+    .button.primary {
+      background: linear-gradient(135deg, var(--purple), #5b63ff);
+      border-color: transparent;
+      box-shadow: 0 18px 45px rgba(139, 92, 246, .28);
+    }
+
+    .quick-card {
+      border: 1px solid var(--line);
+      border-radius: var(--radius-xl);
+      background: rgba(255,255,255,.06);
+      padding: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .quick-card h2 {
+      font-size: 18px;
+      margin-bottom: 14px;
+    }
+
+    .quick-list {
+      display: grid;
+      gap: 12px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .quick-list li {
+      padding: 12px 13px;
+      border-radius: 15px;
+      background: rgba(255,255,255,.07);
+      border: 1px solid rgba(255,255,255,.09);
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .section {
+      padding: 38px 0;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 18px;
+    }
+
+    .section-title {
+      font-size: clamp(28px, 4vw, 42px);
+      letter-spacing: -0.045em;
+    }
+
+    .section-kicker {
+      color: var(--muted);
+      max-width: 720px;
+      margin-top: 10px;
+      font-size: 16px;
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+
+    .metric {
+      border: 1px solid var(--line);
+      background: var(--card);
+      border-radius: var(--radius-lg);
+      padding: 20px;
+      min-height: 134px;
+    }
+
+    .metric .num {
+      display: block;
+      font-size: 29px;
+      font-weight: 950;
+      letter-spacing: -0.055em;
+    }
+
+    .metric .label {
+      display: block;
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 6px;
+    }
+
+    .timeline {
+      position: relative;
+      display: grid;
+      gap: 14px;
+      margin-top: 20px;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 18px;
+      top: 10px;
+      bottom: 10px;
+      width: 2px;
+      background: linear-gradient(var(--purple), var(--blue), var(--green));
+      opacity: .7;
+    }
+
+    .event {
+      display: grid;
+      grid-template-columns: 58px 1fr;
+      gap: 14px;
+      position: relative;
+    }
+
+    .dot {
+      width: 38px;
+      height: 38px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.24);
+      background: linear-gradient(135deg, rgba(139,92,246,.9), rgba(56,189,248,.55));
+      box-shadow: 0 0 0 8px rgba(255,255,255,.04);
+      margin-top: 16px;
+    }
+
+    .event-card {
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.075);
+      border-radius: var(--radius-lg);
+      padding: 19px;
+    }
+
+    .event-date {
+      color: #b9d9ff;
+      font-size: 13px;
+      font-weight: 950;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      margin-bottom: 7px;
+    }
+
+    .event h3 {
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+
+    .event p {
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 18px;
+    }
+
+    .project {
+      border: 1px solid var(--line);
+      background: linear-gradient(135deg, rgba(255,255,255,.09), rgba(255,255,255,.045));
+      border-radius: var(--radius-lg);
+      padding: 20px;
+      min-height: 242px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .project::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--purple), var(--blue));
+      opacity: .88;
+    }
+
+    .project h3 {
+      font-size: 19px;
+      margin-bottom: 10px;
+      padding-top: 6px;
+    }
+
+    .project p,
+    .project li {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .project ul {
+      margin: 10px 0 0 19px;
+      padding: 0;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .tag {
+      display: inline-flex;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.07);
+      color: #dbe7ff;
+      padding: 6px 9px;
+      font-size: 12px;
+      font-weight: 750;
+    }
+
+    .software-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 18px;
+    }
+
+    .software-card {
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.065);
+      border-radius: var(--radius-lg);
+      padding: 20px;
+      min-height: 236px;
+    }
+
+    .software-card h3 {
+      font-size: 19px;
+      margin-bottom: 10px;
+    }
+
+    .software-card p,
+    .software-card li {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .repo-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .repo-link {
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.16);
+      background: rgba(255,255,255,.08);
+      padding: 8px 11px;
+      font-size: 13px;
+      font-weight: 850;
+    }
+
+    .status {
+      display: inline-flex;
+      margin-top: 10px;
+      color: #ffdca3;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .inventory {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 18px;
+    }
+
+    details {
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.065);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+    }
+
+    summary {
+      cursor: pointer;
+      list-style: none;
+      padding: 18px 20px;
+      font-weight: 950;
+      color: #f8fbff;
+    }
+
+    summary::-webkit-details-marker { display: none; }
+
+    details .body {
+      padding: 0 20px 20px;
+      color: var(--muted);
+      border-top: 1px solid rgba(255,255,255,.08);
+    }
+
+    details ul {
+      margin: 14px 0 0 20px;
+      padding: 0;
+    }
+
+    .callout {
+      border: 1px solid rgba(56,189,248,.28);
+      background: rgba(56,189,248,.08);
+      border-radius: var(--radius-lg);
+      padding: 20px;
+      color: #d9efff;
+      margin-top: 18px;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .pill {
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.07);
+      color: #dbe7ff;
+      border-radius: 999px;
+      padding: 8px 11px;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .footer {
+      padding: 46px 0 70px;
+      color: var(--muted);
+      text-align: center;
+      font-size: 14px;
+    }
+
+    @media (max-width: 940px) {
+      .hero-grid,
+      .inventory {
+        grid-template-columns: 1fr;
+      }
+
+      .metrics,
+      .project-grid,
+      .software-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .nav-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .nav-links {
+        justify-content: flex-start;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .metrics,
+      .project-grid,
+      .software-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 54px;
+      }
+
+      .timeline::before {
+        left: 14px;
+      }
+
+      .event {
+        grid-template-columns: 46px 1fr;
+      }
+
+      .dot {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  </style>
 </head>
-
 <body>
-  <div id="page-wraper">
-    <!-- Sidebar Menu -->
-    <div class="responsive-nav">
-      <i class="fa fa-bars" id="menu-toggle"></i>
-      <div id="menu" class="menu">
-        <i class="fa fa-times" id="menu-close"></i>
-        <div class="container">
-          <div class="image">
-            <a href="#"><img src="assets/images/jake-prof-laiko-edit.jpg" alt="" /></a>
-          </div>
-          <div class="author-content">
-            <h4>Jake Matillano</h4>
-            <span>Full Stack Web Developer</span>
-          </div>
-          <nav class="main-nav" role="navigation">
-            <ul class="main-menu">
-              <li><a href="#section1">About Me</a></li>
-              <li><a href="#section2">My Skills</a></li>
-              <li><a href="#section3">Projects</a></li>
-              <li><a href="#section4">Contact Me</a></li>
-
-            </ul>
-          </nav>
-          <div class="social-network">
-            <ul class="soial-icons">
-              <li>
-                <a href="https://github.com/jdoofey" target="_blank"><i class="fa fa-github"></i></a>
-              </li>
-              <li>
-                <a href="https://www.linkedin.com/in/jake-matillano/" target="_blank"><i class="fa fa-linkedin"></i></a>
-              </li>
-              <li>
-                <a href="https://angel.co/u/jake-matillano" target="_blank"><i class="fa fa-angellist"></i></a>
-              </li>
-              <li>
-                <a href="https://docs.google.com/document/d/1Xto_LVgeqAh7rSTt_WCo7fyYL_A7xtpD/edit?usp=sharing&ouid=110428202862164260323&rtpof=true&sd=true"
-                  target="_blank"><i class="fa fa-file"></i></a>
-              </li>
-              <!-- <li>
-                  <a href="#"><i class="fa fa-rss"></i></a>
-                </li> -->
-            </ul>
-          </div>
-          <div class="copyright-text">
-            <p>Copyright 2022 Jake Matillano</p>
-          </div>
-        </div>
+  <nav class="nav" aria-label="Primary navigation">
+    <div class="nav-inner">
+      <a class="brand" href="#top" aria-label="Go to top">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>JM Ops Portfolio</span>
+      </a>
+      <div class="nav-links">
+        <a href="#snapshot">Snapshot</a>
+        <a href="#timeline">Timeline</a>
+        <a href="#projects">Projects</a>
+        <a href="#software">SWE Roots</a>
+        <a href="#work">Work Inventory</a>
       </div>
     </div>
+  </nav>
 
-    <section class="section about-me" data-section="section1">
-      <div class="container">
-        <div class="section-heading">
-          <h2>About Me</h2>
-          <div class="line-dec"></div>
-          <p class="abt-me-text">I'm a software engineer with a passion for Python, React/Redux, Flask, Express,
-            JavaScript, Node.js, and CSS/HTML amongst other technologies. I've learned to appreciate the ever-evolving
-            nature of the tech industry, as there's always something to feed my hunger to learn - whether it's picking
-            up a new language or catching up on docs as technologies get upgraded. I also take pleasure in solving
-            logical problems using different approaches, as well as the creative aspect behind creating an intuitive,
-            entertaining, and elegant user experience.
+  <main id="top">
+    <section class="hero page">
+      <div class="hero-grid">
+        <div class="hero-card">
+          <div class="eyebrow">Technical Operations • Knowledge Systems • Enablement</div>
+          <h1><span class="gradient-text">Jake Matillano</span><br />Technical Operations Portfolio</h1>
+          <p class="hero-copy">
+            I turn messy support patterns into clear workflows, training resources, knowledge systems,
+            and escalation paths that make teams faster, more consistent, and easier to scale.
           </p>
-          <p class="abt-me-text">Both in life and in programming, my thirst for knowledge and experience has been
-            ever-growing. I thoroughly enjoy the process of rising to a challenge and forcing myself to think not only
-            logically, but creatively, when I face problems. </p>
-        </div>
-        <div class="left-image-post">
-          <div class="row">
-            <div class="col-md-6">
-              <div class="left-image">
-                <img src="assets/images/yosemite.webp" alt="" />
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="right-text">
-                <h4>When I'm not at the computer...</h4>
-                <p class="abt-me-text2">
-                  I enjoy exploring nature and cities - Yosemite is currently my favorite national park, but I have a
-                  lot left to explore. Additionally, I enjoy dabbling in a wide variety of sports and instruments:
-                  soccer, tennis, fencing, MMA, piano, and guitar to name a few. I am especially passionate about
-                  team-based sports, which have taught me important interpersonal skills that I use to this day. I live
-                  life for new experiences, which relates to the joy I find in programming - there's always something
-                  new to learn and master.
-                </p>
-
-              </div>
-            </div>
+          <div class="hero-actions">
+            <a class="button primary" href="#projects">View Impact Areas</a>
+            <a class="button" href="#software">See SWE Projects</a>
           </div>
         </div>
-        <div class="right-image-post">
-          <div class="row">
-            <div class="col-md-6">
-              <div class="left-text">
-                <h4>What I'm Working On</h4>
-                <p class="abt-me-text2">
-                  Right now, I'm working on adding more features to some of my existing projects, such as an interactive
-                  UI that allows users to drag and drop elements, as well as waveforms. I'm passively looking into
-                  learning Java and C in my free time as well.
-                </p>
 
-                <p>Next on the list for me to learn is Vue, 3js, and Blender</p>
-                <!-- <div class="white-button">
-                    <a href="#">Back to Top</a>
-                  </div> -->
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="right-image">
-                <img src="assets/images/working.avif" alt="" />
-              </div>
-            </div>
-          </div>
+        <aside class="quick-card" aria-label="Portfolio highlights">
+          <h2>What This Portfolio Shows</h2>
+          <ul class="quick-list">
+            <li>Contractor → FTE → L2 growth in roughly two years</li>
+            <li>Training, shadowing, and cross-training standardization</li>
+            <li>Knowledge base modernization across high-impact support areas</li>
+            <li>AI-ready operational workflow documentation</li>
+            <li>SME development across TKDS, international support, and Macromatix</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section page" id="snapshot">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">Snapshot</h2>
+          <p class="section-kicker">
+            My strongest work sits at the intersection of troubleshooting, communication, documentation,
+            and team enablement.
+          </p>
+        </div>
+      </div>
+
+      <div class="metrics">
+        <div class="metric">
+          <span class="num">2 yrs</span>
+          <span class="label">Contractor to Senior Service Desk Specialist / L2 progression</span>
+        </div>
+        <div class="metric">
+          <span class="num">2 wks</span>
+          <span class="label">Rapid cross-training ramp-up after starting</span>
+        </div>
+        <div class="metric">
+          <span class="num">10–15</span>
+          <span class="label">Store-facing chatbot / agent assist modules built</span>
+        </div>
+        <div class="metric">
+          <span class="num">Multi-area</span>
+          <span class="label">TKDS, Annspire, BOH, SCA, kiosk, Tracks, UK support</span>
         </div>
       </div>
     </section>
 
-    <h5></h5>
-
-    <section class="section my-services" data-section="section2">
-      <div class="container">
-        <div class="section-heading">
-          <h2>My Skills</h2>
-          <div class="line-dec"></div>
-          <h3>Languages & Technologies</h3>
-          <h5>Python | React | Redux | Express.js | JavaScript | HTML | CSS | Docker | Node.js</h5>
-          <h5>Git | Flask | MySQL | Postgres | SQLite | AWS </h5>
-
+    <section class="section page" id="timeline">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">Career Timeline</h2>
+          <p class="section-kicker">
+            A concise timeline of increasing scope: ramp-up, training influence, documentation ownership,
+            L2 responsibilities, and SME development.
+          </p>
         </div>
-        <div class="row">
+      </div>
 
-          <img src="https://skillicons.dev/icons?i=py,react,redux,express,javascript,flask,mysql" />
-          <div>&nbsp; </div>
-          <img src="https://skillicons.dev/icons?i=html,css,docker,nodejs,git,postgres,aws" />
-          <div class="section-heading">
-            <div>&nbsp;</div>
-            <div>&nbsp;</div>
-            <h5>...and more! I'm currently learning C, Java, 3js, and Blender in my free time. Right now, I'm also
-              working on adding more features and polishing up my projects to create a smoother user experience.</h4>
-              <div>&nbsp;</div>
-              <h5>One aspect I love about this industry is its ever-evolving nature. I have a natural thirst for
-                knowledge and with how often new languages are updated or new technologies are created, how could I ever
-                get bored?</h5>
-              <div>&nbsp;</div>
-              <h5>There's always something new to learn, and there's are so many ways for me to improve - so I strive to
-                add to my skillset and become a developer each and everyday.</h5>
-
-
-
+      <div class="timeline">
+        <article class="event">
+          <div class="dot" aria-hidden="true"></div>
+          <div class="event-card">
+            <div class="event-date">March 2024</div>
+            <h3>Contractor Start / Rapid Ramp-Up</h3>
+            <p>Started at Taco Bell Service Desk, became fully cross-trained within approximately two weeks, and quickly built proficiency across restaurant technology support areas and escalation workflows.</p>
           </div>
-        </div>
+        </article>
+
+        <article class="event">
+          <div class="dot" aria-hidden="true"></div>
+          <div class="event-card">
+            <div class="event-date">Mid–Late 2024</div>
+            <h3>Expanded Support & Training Involvement</h3>
+            <p>Learned international queues around the three-month mark, became an early consistent UK Support contributor, began formal training involvement, and created a structured shadowing/training guide from trainer feedback.</p>
+          </div>
+        </article>
+
+        <article class="event">
+          <div class="dot" aria-hidden="true"></div>
+          <div class="event-card">
+            <div class="event-date">2024–2025</div>
+            <h3>Cross-Training & Enablement</h3>
+            <p>Helped standardize cross-training with scenario-based material targeting high call drivers, partnered on eLearning updates, and helped expand cross-training support to two days.</p>
+          </div>
+        </article>
+
+        <article class="event">
+          <div class="dot" aria-hidden="true"></div>
+          <div class="event-card">
+            <div class="event-date">Early–Mid 2025</div>
+            <h3>Chatbot / Agent Assist Development</h3>
+            <p>Worked with leadership to create guided modules for high-impact store-facing Annspire and Tracks issues. The project was later cancelled, but it demonstrated decision-flow thinking and strong platform knowledge.</p>
+          </div>
+        </article>
+
+        <article class="event">
+          <div class="dot" aria-hidden="true"></div>
+          <div class="event-card">
+            <div class="event-date">Late 2025</div>
+            <h3>Operational Exposure & TKDS Training Support</h3>
+            <p>Supported TKDS simulator/eLearning work before it paused and introduced veteran FTE floor-monitoring exposure to build leadership readiness and broader operational awareness.</p>
+          </div>
+        </article>
+
+        <article class="event">
+          <div class="dot" aria-hidden="true"></div>
+          <div class="event-card">
+            <div class="event-date">2026</div>
+            <h3>Promotion to Senior Service Desk Specialist / L2</h3>
+            <p>Moved into L2 responsibilities focused on escalations, analyst development, training standardization, knowledge base improvement, and SME development.</p>
+          </div>
+        </article>
+
+        <article class="event">
+          <div class="dot" aria-hidden="true"></div>
+          <div class="event-card">
+            <div class="event-date">2026 – Current</div>
+            <h3>SME, AI Workflow, and International Support Development</h3>
+            <p>Expanded work across TKDS/Balanced Kitchen, AI workflow KBs, Training Pod concepts, UK/vendor escalation standardization, and new ownership as the Service Desk specialist for Macromatix.</p>
+          </div>
+        </article>
       </div>
     </section>
 
-    <h5></h5>
-
-    <section class="section my-work" data-section="section3">
-      <div class="container">
-        <div class="section-heading">
-          <h2>Projects</h2>
-          <div class="line-dec"></div>
-          <span class="abt-me-text2">Below you'll find some of the projects I've worked on in the past! I was able to
-            complete them all in under a month, which taught me how to learn quickly and organize myself well.</span>
-          <div>&nbsp;</div>
-          <span class="abt-me-text2">Hover over each card and click the magnifying glass icon to visit the sites!</span>
+    <section class="section page" id="projects">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">Featured Impact Areas</h2>
+          <p class="section-kicker">
+            These projects best represent my shift from strong individual contributor to someone improving
+            the systems analysts rely on.
+          </p>
         </div>
-        <div class="row">
-          <div class="isotope-wrapper">
-            <!-- <form class="isotope-toolbar">
-                <label
-                  ><input
-                    type="radio"
-                    data-type="*"
-                    checked=""
-                    name="isotope-filter"
-                  />
-                  <span>all</span></label
-                >
-                <label
-                  ><input
-                    type="radio"
-                    data-type="people"
-                    name="isotope-filter"
-                  />
-                  <span>people</span></label
-                >
-                <label
-                  ><input
-                    type="radio"
-                    data-type="nature"
-                    name="isotope-filter"
-                  />
-                  <span>nature</span></label
-                >
-                <label
-                  ><input
-                    type="radio"
-                    data-type="animals"
-                    name="isotope-filter"
-                  />
-                  <span>animals</span></label
-                >
-              </form> -->
-            <div class="isotope-box">
-              <div class="isotope-item" data-type="nature">
-                <figure class="snip1321">
-                  <img src="assets/images/kalmado.png" alt="sq-sample26" />
-                  <figcaption>
+      </div>
 
-                    <a href="https://kalmado.herokuapp.com/" target="_blank"><i class="fa fa-search"></i></a>
-                    <h4>Kalmado</h4>
-                    <span></span>
-                  </figcaption>
-                </figure>
-                <span>
+      <div class="project-grid">
+        <article class="project">
+          <h3>Training & Onboarding Standardization</h3>
+          <p>Created and later restandardized training guide/workflow content to improve new-hire readiness and trainer consistency.</p>
+          <ul>
+            <li>Day-by-day shadowing structure</li>
+            <li>Trainer and supervisor feedback alignment</li>
+            <li>Training slide and test updates</li>
+            <li>Focus on the “why” behind troubleshooting</li>
+          </ul>
+        </article>
 
-                  <h3>Kalmado</h3>
-                  <div>A full stack project management application. Increase productivity levels by using Kalmado in
-                    which you can create projects and tasks.</div>
-                  <div>&nbsp;</div>
-                  <h5>Technologies</h5>
-                  <div>React/Redux, Python, Javascript, Flask, Docker, Jinja, SQLite, HTML/CSS</div>
-                  <div>&nbsp;</div>
-                  <h5>About the Project</h5>
-                  <div>
-                    • Developed a smooth, intuitive user experience / UI through the implementation of React/Redux,
-                    CSS/CSS3, and HTML5 to provide users with several features to interact with custom data.
-                  </div>
-                  <h5></h5>
-                  <div>
-                    • Constructed an efficient database utilizing Python’s ORM library SQLAlchemy.
-                  </div>
-                  <h5></h5>
-                  <div>
-                    • Designed front and back end validations to protect the database from unwanted data and added
-                    further
-                    security by leveraging Werkzeug, WTForm validators, and CSRF, among other technologies
-                  </div>
-                  <h5></h5>
-                  <a class="project-links" href="https://github.com/jdoofey/Kalmado" target="_blank">Github Repo</a>
-                  <span> &nbsp;&nbsp;&nbsp;</span>
-                  <a class="project-links" href="https://kalmado.herokuapp.com/" target="_blank">Live Site</a>
-                </span>
-              </div>
+        <article class="project">
+          <h3>Cross-Training & eLearning</h3>
+          <p>Helped build practical training exposure through common-issue scenarios, high call-driver content, and eLearning alignment.</p>
+          <ul>
+            <li>Scenario-based cross-training</li>
+            <li>Two-day cross-training support expansion</li>
+            <li>TKDS simulator/eLearning support</li>
+          </ul>
+        </article>
 
-              <div class="isotope-item" data-type="people">
-                <figure class="snip1321">
-                  <img src="assets/images/nope.png" alt="sq-sample26" />
-                  <figcaption>
-                    <a href="https://nope-yelp.herokuapp.com/" target="_blank"><i class="fa fa-search"></i></a>
-                    <h4>nope.</h4>
-                    <span></span>
-                  </figcaption>
-                </figure>
-                <span>
-                  <h3>Nope</h3>
-                  <div>
-                    Nope is a fullstack web application, inspired by Yelp.
-                    Visit the site as a passive user, active user, or business owner.
-                    As a business owner you can recieve feedback on how the business can improve.
-                    As an active user you can read, post, delete, and edit grumbles or become a business owner!
-                    As a passive user you may visit business pages to read grumbles.
-                  </div>
-                  <div>&nbsp;</div>
-                  <h5>Technologies</h5>
-                  <div>React/Redux, Python, Javascript, Flask, Docker, Jinja, SQLite, HTML/CSS</div>
-                  <div>&nbsp;</div>
-                  <h5>About the Project</h5>
-                  <div>
-                    • Leveraged Fuse.js library to customize and create efficient querying of data for the search functionality
-                  </div>
-                  <h5></h5>
-                  <div>
-                    • Integrated Google Maps API with geolocation based searching to display business locations on a map
-                  </div>
-                  <h5></h5>
-                  <div>
-                    • Constructed efficient API routes using the Python web framework: Flask
-                  </div>
-                  <h5></h5>
-                  <a class="project-links" href="https://github.com/Samsuhhh/Nope-Yelp" target="_blank">Github Repo</a>
-                  <span> &nbsp;&nbsp;&nbsp;</span>
-                  <a class="project-links" href="http://nope-yelp.herokuapp.com/" target="_blank">Live Site</a>
+        <article class="project">
+          <h3>Chatbot / Agent Assist Workflows</h3>
+          <p>Built guided modules for store-facing, high-impact operational issues with a decision-flow mindset.</p>
+          <ul>
+            <li>10–15 fully fleshed out modules</li>
+            <li>Annspire and Tracks workflow focus</li>
+            <li>Structured questions, routes, and steps</li>
+          </ul>
+        </article>
 
-                  <div>
-                  </div>
-                </span>
-              </div>
+        <article class="project">
+          <h3>Knowledge Base Modernization</h3>
+          <p>Improved documentation by capturing tribal knowledge, standardizing troubleshooting flow, and strengthening escalation readiness.</p>
+          <ul>
+            <li>Hardware troubleshooting standardization</li>
+            <li>Device verification and power-flow logic</li>
+            <li>Cleaner handoff and escalation context</li>
+          </ul>
+        </article>
 
-              <div class="isotope-item" data-type="animals">
-                <figure class="snip1321">
-                  <img src="assets/images/tunenimbus.png" alt="sq-sample26" />
-                  <figcaption>
-                    <a href="assets/images/tunenimbus.png" data-lightbox="image-1" data-title="Caption"><i
-                        class="fa fa-search"></i></a>
-                    <h4>TuneNimbus</h4>
-                  </figcaption>
-                </figure>
-                <span>
-                  <h3>TuneNimbus</h3>
-                  <div>
-                    TuneNimbus is an online audio distributiion platform and music sharing website that enables its
-                    users to upload, promote, and share music, as well as discover new music and share their opinions.
-                  </div>
-                  <div>&nbsp;</div>
-                  <div>React/Redux, Javascript, Express, Node.js, Sequelize, SQLite, HTML/CSS</div>
-                  <div>&nbsp;</div>
-                  <h5>About the Project</h5>
-                  <div>
-                    • Implemented songs/playlists features that allow users to create, edit, and delete data by employing
-                    JavaScript promises to fetch and store data asynchronously
-                  </div>
-                  <h5></h5>
-                  <div>
-                    • Integrated audioplayer from React h5 AudioPlayer library to allow users to listen to music on the site
-                  </div>
-                  <h5></h5>
-                  <a class="project-links" href="https://github.com/jdoofey/TuneNimbus" target="_blank">Github Repo</a>
-                  <span> &nbsp;&nbsp;&nbsp;</span>
-                  <a class="project-links" href="https://tunenimbus.herokuapp.com" target="_blank">Live Site</a>
+        <article class="project">
+          <h3>AI Virtual Agent Workflow KBs</h3>
+          <p>Created operational KBs intended for AI agent testing with plain-English decision flows, FAQs, and intent-mapping concepts.</p>
+          <ul>
+            <li>Store-facing operational workflows</li>
+            <li>Common phrasing and metadata support</li>
+            <li>Clear stop/escalation boundaries</li>
+          </ul>
+        </article>
 
-                </span>
-              </div>
-
-              <!-- <div class="isotope-item" data-type="people">
-                  <figure class="snip1321">
-                    <img
-                      src="assets/images/portfolio-04.jpg"
-                      alt="sq-sample26"
-                    />
-                    <figcaption>
-                      <a
-                        href="assets/images/portfolio-04.jpg"
-                        data-lightbox="image-1"
-                        data-title="Caption"
-                        ><i class="fa fa-search"></i
-                      ></a>
-                      <h4>Item Fourth</h4>
-                      <span>Re-distribution not allowed</span>
-                    </figcaption>
-                  </figure>
-                </div>
-
-                <div class="isotope-item" data-type="nature">
-                  <figure class="snip1321">
-                    <img
-                      src="assets/images/portfolio-05.jpg"
-                      alt="sq-sample26"
-                    />
-                    <figcaption>
-                      <a
-                        href="assets/images/portfolio-05.jpg"
-                        data-lightbox="image-1"
-                        data-title="Caption"
-                        ><i class="fa fa-search"></i
-                      ></a>
-                      <h4>Fifth Awesome</h4>
-                      <span>Ut sollicitudin risus</span>
-                    </figcaption>
-                  </figure>
-                </div>
-
-                <div class="isotope-item" data-type="animals">
-                  <figure class="snip1321">
-                    <img
-                      src="assets/images/portfolio-06.jpg"
-                      alt="sq-sample26"
-                    />
-                    <figcaption>
-                      <a
-                        href="assets/images/portfolio-06.jpg"
-                        data-lightbox="image-1"
-                        data-title="Caption"
-                        ><i class="fa fa-search"></i
-                      ></a>
-                      <h4>Awesome Sixth</h4>
-                      <span>Donec eget massa ante</span>
-                    </figcaption>
-                  </figure>
-                </div> -->
-            </div>
-          </div>
-        </div>
+        <article class="project">
+          <h3>SME & Support Ownership</h3>
+          <p>Expanded into TKDS SME work, International Pod support, and Macromatix specialist development.</p>
+          <ul>
+            <li>Balanced Kitchen/TKDS reference work</li>
+            <li>UK/vendor escalation standardization</li>
+            <li>Macromatix ownership ramp-up</li>
+          </ul>
+        </article>
       </div>
     </section>
 
-    <h5></h5>
+    <section class="section page" id="software">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">Software Engineering Roots</h2>
+          <p class="section-kicker">
+            My earlier projects are no longer hosted live, but they show the technical foundation behind how I think:
+            build systems, map workflows, design clean interfaces, and solve problems creatively.
+          </p>
+        </div>
+      </div>
 
-    <section class="section contact-me" data-section="section4">
-      <div class="container">
-        <div class="section-heading">
-          <h2>Contact Me</h2>
-          <div class="line-dec"></div>
+      <div class="software-grid">
+        <article class="software-card">
+          <h3>Kalmado</h3>
+          <p>A full-stack project management application inspired by productivity tools like Asana/Trello, built around projects, tasks, and user-owned data.</p>
+          <div class="tags">
+            <span class="tag">React</span>
+            <span class="tag">Redux</span>
+            <span class="tag">Python</span>
+            <span class="tag">Flask</span>
+            <span class="tag">SQLAlchemy</span>
+            <span class="tag">Docker</span>
+          </div>
+          <span class="status">Live demo archived / unavailable</span>
+          <div class="repo-row">
+            <a class="repo-link" href="https://github.com/jdoofey/Kalmado" target="_blank" rel="noreferrer">GitHub Repo</a>
+          </div>
+        </article>
 
-          <div class="social-network-main">
-            <ul class="soial-icons-main">
-              <li>
-                <a href="https://github.com/jdoofey" target="_blank"><i class="fa fa-github">&nbsp;Github</i></a>
-              </li>
-              <li>
-                <a href="https://www.linkedin.com/in/jake-matillano/" target="_blank"><i
-                    class="fa fa-linkedin">&nbsp;Linked In</i></a>
-              </li>
-              <li>
-                <a href="https://angel.co/u/jake-matillano" target="_blank"><i class="fa fa-angellist">&nbsp;Angel
-                    List</i></a>
-              </li>
-              <li>
-                <a href="https://docs.google.com/document/d/1Xto_LVgeqAh7rSTt_WCo7fyYL_A7xtpD/edit?usp=sharing&ouid=110428202862164260323&rtpof=true&sd=true"
-                  target="_blank"><i class="fa fa-file">&nbsp;Resume</i></a>
-              </li>
-              <!-- <li>
-                  <a href="#"><i class="fa fa-rss"></i></a>
-                </li> -->
+        <article class="software-card">
+          <h3>Nope</h3>
+          <p>A Yelp-inspired group project with business pages, user reviews, ownership flows, search functionality, and map-based location context.</p>
+          <div class="tags">
+            <span class="tag">React</span>
+            <span class="tag">Redux</span>
+            <span class="tag">Python</span>
+            <span class="tag">Flask</span>
+            <span class="tag">Fuse.js</span>
+            <span class="tag">Google Maps API</span>
+          </div>
+          <span class="status">Live demo archived / unavailable</span>
+          <div class="repo-row">
+            <a class="repo-link" href="https://github.com/Samsuhhh/Nope-Yelp" target="_blank" rel="noreferrer">GitHub Repo</a>
+          </div>
+        </article>
+
+        <article class="software-card">
+          <h3>TuneNimbus</h3>
+          <p>An audio distribution and music sharing application focused on song uploads, playlists, discovery, and listening experiences.</p>
+          <div class="tags">
+            <span class="tag">React</span>
+            <span class="tag">Redux</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">Express</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">Sequelize</span>
+          </div>
+          <span class="status">Live demo archived / unavailable</span>
+          <div class="repo-row">
+            <a class="repo-link" href="https://github.com/jdoofey/TuneNimbus" target="_blank" rel="noreferrer">GitHub Repo</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section page" id="work">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">Selected Work Inventory</h2>
+          <p class="section-kicker">
+            Public-safe categories of work. Internal article IDs, ticket links, store data, and sensitive process details are intentionally excluded.
+          </p>
+        </div>
+      </div>
+
+      <div class="inventory">
+        <details open>
+          <summary>Domestic / General Support Documentation</summary>
+          <div class="body">
+            <ul>
+              <li>TKDS no-network, Android reset, bump bar, black screen, and line-printer troubleshooting</li>
+              <li>Annspire order synchronization, POS offline, and cash-management workflows</li>
+              <li>BOH power, monitor/display, browser/cache/DNS, disaster recovery, and system-time issues</li>
+              <li>Kiosk power troubleshooting and SCA/payment-device support workflows</li>
+              <li>Managed/unmanaged device verification and static-discharge guidance</li>
+              <li>P630 support process</li>
             </ul>
           </div>
-        </div>
-        <!-- <div class="row">
-            <div class="right-content">
-            <div class="container">
-                <form id="contact" action="" method="post">
-                  <div class="row">
-                    <div class="col-md-6">
-                      <fieldset>
-                        <input
-                          name="name"
-                          type="text"
-                          class="form-control"
-                          id="name"
-                          placeholder="Your name..."
-                          required=""
-                        />
-                      </fieldset>
-                    </div>
-                    <div class="col-md-6">
-                      <fieldset>
-                        <input
-                          name="email"
-                          type="text"
-                          class="form-control"
-                          id="email"
-                          placeholder="Your email..."
-                          required=""
-                        />
-                      </fieldset>
-                    </div>
-                    <div class="col-md-12">
-                      <fieldset>
-                        <input
-                          name="subject"
-                          type="text"
-                          class="form-control"
-                          id="subject"
-                          placeholder="Subject..."
-                          required=""
-                        />
-                      </fieldset>
-                    </div>
-                    <div class="col-md-12">
-                      <fieldset>
-                        <textarea
-                          name="message"
-                          rows="6"
-                          class="form-control"
-                          id="message"
-                          placeholder="Your message..."
-                          required=""
-                        ></textarea>
-                      </fieldset>
-                    </div>
-                    <div class="col-md-12">
-                      <fieldset>
-                        <button type="submit" id="form-submit" class="button">
-                          Send Message
-                        </button>
-                      </fieldset>
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div> -->
+        </details>
+
+        <details>
+          <summary>SmartHub / Infrastructure-Adjacent KB Strategy</summary>
+          <div class="body">
+            <ul>
+              <li>Issue identification and routing structure</li>
+              <li>Hardware and connectivity troubleshooting centralization</li>
+              <li>Network/connectivity validation flow</li>
+              <li>Cluster and node-health routing</li>
+              <li>Puppet, config, and ris-config routing improvements</li>
+            </ul>
+          </div>
+        </details>
+
+        <details>
+          <summary>AI Workflow / Operational KBs</summary>
+          <div class="body">
+            <ul>
+              <li>Tracks Timekeeping Assistance operational workflow</li>
+              <li>Annspire Open or Floated Drawer Assistance operational workflow</li>
+              <li>Tracks Credit Purchase Order workflow</li>
+              <li>Tracks ICOS / High Difference / Variance assistance workflow</li>
+              <li>Intent mapping, common store phrasing, and metadata/tag support</li>
+            </ul>
+          </div>
+        </details>
+
+        <details>
+          <summary>UK Support / Vendor Escalation Standardization</summary>
+          <div class="body">
+            <ul>
+              <li>Acrelec, GlobalPay, Worldpay, and Macromatix escalation documentation</li>
+              <li>UK kiosk and vendor escalation workflow cleanup</li>
+              <li>UK menu change ownership clarification for POS/kiosk/both scenarios</li>
+              <li>UK kiosk menu item availability / LMS Console ownership clarification</li>
+              <li>Store-facing escalation template improvements, including store number and address requirements</li>
+            </ul>
+          </div>
+        </details>
       </div>
     </section>
 
-    <h5></h5>
-  </div>
+    <section class="section page" id="themes">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">Operating Themes</h2>
+          <p class="section-kicker">
+            The leadership story: moving from personal execution to scalable team enablement.
+          </p>
+        </div>
+      </div>
 
-  <!-- Scripts -->
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+      <div class="pill-row">
+        <span class="pill">Technical operations</span>
+        <span class="pill">Escalation readiness</span>
+        <span class="pill">Knowledge management</span>
+        <span class="pill">Training design</span>
+        <span class="pill">Workflow standardization</span>
+        <span class="pill">AI-ready documentation</span>
+        <span class="pill">SME development</span>
+        <span class="pill">Vendor escalation</span>
+        <span class="pill">International support</span>
+        <span class="pill">Process ownership</span>
+        <span class="pill">React</span>
+        <span class="pill">Python</span>
+        <span class="pill">Flask</span>
+        <span class="pill">Node.js</span>
+      </div>
 
-  <script src="assets/js/isotope.min.js"></script>
-  <script src="assets/js/owl-carousel.js"></script>
-  <script src="assets/js/lightbox.js"></script>
-  <script src="assets/js/custom.js"></script>
-  <script>
-    //according to loftblog tut
-    $(".main-menu li:first").addClass("active");
+      <div class="callout">
+        <strong>Positioning statement:</strong>
+        I improve support systems by turning frontline troubleshooting patterns into clear workflows,
+        documentation standards, and training resources that help teams operate with more confidence and consistency.
+      </div>
+    </section>
+  </main>
 
-    var showSection = function showSection(section, isAnimate) {
-      var direction = section.replace(/#/, ""),
-        reqSection = $(".section").filter(
-          '[data-section="' + direction + '"]'
-        ),
-        reqSectionPos = reqSection.offset().top - 0;
-
-      if (isAnimate) {
-        $("body, html").animate(
-          {
-            scrollTop: reqSectionPos
-          },
-          800
-        );
-      } else {
-        $("body, html").scrollTop(reqSectionPos);
-      }
-    };
-
-    var checkSection = function checkSection() {
-      $(".section").each(function () {
-        var $this = $(this),
-          topEdge = $this.offset().top - 80,
-          bottomEdge = topEdge + $this.height(),
-          wScroll = $(window).scrollTop();
-        if (topEdge < wScroll && bottomEdge > wScroll) {
-          var currentId = $this.data("section"),
-            reqLink = $("a").filter("[href*=\\#" + currentId + "]");
-          reqLink
-            .closest("li")
-            .addClass("active")
-            .siblings()
-            .removeClass("active");
-        }
-      });
-    };
-
-    $(".main-menu").on("click", "a", function (e) {
-      e.preventDefault();
-      showSection($(this).attr("href"), true);
-    });
-
-    $(window).scroll(function () {
-      checkSection();
-    });
-  </script>
+  <footer class="footer page">
+    <p>Built as a public-safe portfolio page. No internal links, ticket data, store-specific information, or confidential process details included.</p>
+  </footer>
 </body>
-
 </html>
