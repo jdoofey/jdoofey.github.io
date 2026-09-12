@@ -4,30 +4,35 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Jake Matillano | Technical Operations Portfolio</title>
-  <meta name="description" content="Jake Matillano portfolio: technical operations, service desk leadership, knowledge management, training enablement, AI workflow documentation, and software development foundation." />
+  <meta name="description" content="Jake Matillano portfolio: technical operations, service desk leadership, knowledge management, analyst enablement, AI workflow documentation, and software engineering foundation." />
+
   <style>
     :root {
-      --bg: #070a13;
-      --bg-2: #0d1326;
-      --card: rgba(255, 255, 255, 0.075);
-      --card-2: rgba(255, 255, 255, 0.105);
-      --text: #f5f8ff;
-      --muted: #aebbd5;
-      --muted-2: #d7e2f7;
-      --line: rgba(255,255,255,0.14);
-      --purple: #8b5cf6;
-      --blue: #38bdf8;
-      --green: #22c55e;
-      --orange: #f59e0b;
-      --shadow: 0 28px 90px rgba(0,0,0,.36);
-      --radius-xl: 30px;
-      --radius-lg: 20px;
-      --radius-md: 14px;
-      --max: 1120px;
+      --bg: #151515;
+      --bg-deep: #101010;
+      --bg-soft: #1c1c1c;
+      --surface: #232323;
+      --surface-2: #2b2b2b;
+      --surface-3: #333333;
+      --tile: #143d2a;
+      --tile-2: #185234;
+      --tile-3: #0f3222;
+      --green: #1db954;
+      --green-bright: #1ed760;
+      --green-soft: rgba(30, 215, 96, 0.12);
+      --text: #f6f6f6;
+      --muted: #b8b8b8;
+      --muted-2: #dfdfdf;
+      --line: rgba(255,255,255,.12);
+      --line-green: rgba(30,215,96,.34);
+      --shadow: 0 32px 90px rgba(0,0,0,.42);
+      --radius-xl: 34px;
+      --radius-lg: 22px;
+      --radius-md: 16px;
+      --max: 1200px;
     }
 
     * { box-sizing: border-box; }
-
     html { scroll-behavior: smooth; }
 
     body {
@@ -35,27 +40,22 @@
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       color: var(--text);
       background:
-        radial-gradient(circle at 15% 8%, rgba(139, 92, 246, .35), transparent 30%),
-        radial-gradient(circle at 86% 12%, rgba(56, 189, 248, .24), transparent 27%),
-        radial-gradient(circle at 78% 75%, rgba(34, 197, 94, .12), transparent 28%),
-        linear-gradient(135deg, var(--bg) 0%, #0a0f1f 43%, var(--bg-2) 100%);
+        radial-gradient(circle at 20% 5%, rgba(30,215,96,.14), transparent 30%),
+        radial-gradient(circle at 82% 18%, rgba(30,215,96,.08), transparent 27%),
+        linear-gradient(135deg, #111 0%, var(--bg) 46%, #1a1a1a 100%);
       line-height: 1.6;
       min-height: 100vh;
     }
 
     a { color: inherit; }
-
-    .page {
-      width: min(var(--max), calc(100% - 36px));
-      margin: 0 auto;
-    }
+    .page { width: min(var(--max), calc(100% - 36px)); margin: 0 auto; }
 
     .nav {
       position: sticky;
       top: 0;
       z-index: 50;
       backdrop-filter: blur(18px);
-      background: rgba(7, 10, 19, .76);
+      background: rgba(16,16,16,.82);
       border-bottom: 1px solid var(--line);
     }
 
@@ -74,25 +74,25 @@
       align-items: center;
       gap: 11px;
       text-decoration: none;
-      font-weight: 900;
-      letter-spacing: -.02em;
+      font-weight: 950;
+      letter-spacing: -.03em;
     }
 
     .brand-mark {
-      width: 35px;
-      height: 35px;
-      border-radius: 13px;
-      background: linear-gradient(135deg, var(--purple), var(--blue));
-      box-shadow: 0 14px 34px rgba(139,92,246,.33);
+      width: 36px;
+      height: 36px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--green-bright), var(--green));
+      box-shadow: 0 0 0 7px rgba(30,215,96,.09), 0 18px 38px rgba(30,215,96,.18);
       position: relative;
     }
 
     .brand-mark::after {
       content: "";
       position: absolute;
-      inset: 8px;
-      border-radius: 8px;
-      border: 1px solid rgba(255,255,255,.5);
+      inset: 11px;
+      border-radius: 999px;
+      background: #101010;
     }
 
     .nav-links {
@@ -112,69 +112,76 @@
 
     .nav-links a:hover {
       color: var(--text);
-      background: rgba(255,255,255,.09);
+      background: rgba(255,255,255,.07);
     }
 
-    .hero {
-      padding: 84px 0 44px;
-    }
+    .hero { padding: 74px 0 34px; }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.25fr .75fr;
-      gap: 24px;
+      grid-template-columns: minmax(0, 1.05fr) minmax(320px, .72fr);
+      gap: 22px;
       align-items: stretch;
     }
 
-    .hero-card {
-      background: linear-gradient(135deg, rgba(255,255,255,.12), rgba(255,255,255,.052));
+    .hero-main {
       border: 1px solid var(--line);
       border-radius: var(--radius-xl);
+      background:
+        radial-gradient(circle at 82% 6%, rgba(30,215,96,.16), transparent 36%),
+        linear-gradient(135deg, rgba(255,255,255,.065), rgba(255,255,255,.035));
       box-shadow: var(--shadow);
-      padding: clamp(30px, 5vw, 56px);
-      position: relative;
+      padding: clamp(30px, 5vw, 58px);
       overflow: hidden;
+      position: relative;
+      min-height: 620px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
 
-    .hero-card::before {
+    .hero-main::after {
       content: "";
       position: absolute;
-      width: 360px;
-      height: 360px;
-      right: -130px;
-      bottom: -170px;
-      background: radial-gradient(circle, rgba(56,189,248,.28), transparent 68%);
+      width: 540px;
+      height: 540px;
+      right: -240px;
+      bottom: -280px;
+      border-radius: 999px;
+      background: radial-gradient(circle, rgba(30,215,96,.26), transparent 67%);
       pointer-events: none;
     }
 
-    .eyebrow {
-      color: #d9ccff;
-      font-weight: 900;
+    .eyebrow, .section-label {
+      color: var(--green-bright);
+      font-weight: 950;
       letter-spacing: .14em;
       text-transform: uppercase;
       font-size: 12px;
-      margin-bottom: 14px;
     }
 
-    h1, h2, h3 { line-height: 1.08; margin: 0; }
+    .eyebrow { margin-bottom: 14px; }
+    .section-label { margin-bottom: 10px; }
+
+    h1, h2, h3, h4 { margin: 0; line-height: 1.06; }
 
     h1 {
-      font-size: clamp(42px, 7.3vw, 76px);
-      letter-spacing: -0.065em;
-      max-width: 850px;
+      font-size: clamp(45px, 7.7vw, 84px);
+      letter-spacing: -.075em;
+      max-width: 840px;
     }
 
     .gradient-text {
-      background: linear-gradient(90deg, #ffffff, #d9ccff 40%, #9be7ff);
+      background: linear-gradient(90deg, #fff 0%, #e9fff0 38%, var(--green-bright) 100%);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
     }
 
     .hero-copy {
-      max-width: 760px;
-      color: var(--muted);
-      font-size: clamp(17px, 2vw, 21px);
+      max-width: 770px;
+      color: var(--muted-2);
+      font-size: clamp(18px, 2.1vw, 22px);
       margin: 22px 0 0;
     }
 
@@ -183,114 +190,370 @@
       gap: 12px;
       flex-wrap: wrap;
       margin-top: 30px;
+      position: relative;
+      z-index: 2;
     }
 
     .button {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 8px;
       text-decoration: none;
       border-radius: 999px;
       padding: 12px 16px;
-      font-weight: 900;
+      font-weight: 950;
       border: 1px solid var(--line);
-      background: rgba(255,255,255,.08);
+      background: rgba(255,255,255,.07);
+      transition: transform .16s ease, background .16s ease, border-color .16s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-1px);
+      border-color: rgba(255,255,255,.2);
+      background: rgba(255,255,255,.1);
     }
 
     .button.primary {
-      background: linear-gradient(135deg, var(--purple), #5b63ff);
+      color: #071108;
+      background: linear-gradient(135deg, var(--green-bright), var(--green));
       border-color: transparent;
-      box-shadow: 0 18px 45px rgba(139, 92, 246, .28);
+      box-shadow: 0 18px 45px rgba(30,215,96,.18);
     }
 
-    .quick-card {
+    .hero-bottom {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 38px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .mini-proof {
+      border: 1px solid var(--line-green);
+      background: linear-gradient(135deg, var(--tile-2), var(--tile-3));
+      border-radius: 18px;
+      padding: 16px;
+    }
+
+    .mini-proof strong {
+      display: block;
+      font-size: 23px;
+      letter-spacing: -.04em;
+    }
+
+    .mini-proof span {
+      display: block;
+      color: #ddf9e5;
+      font-size: 13px;
+      margin-top: 4px;
+    }
+
+    .profile-stack {
+      display: grid;
+      gap: 18px;
+    }
+
+    .profile-card {
       border: 1px solid var(--line);
       border-radius: var(--radius-xl);
-      background: rgba(255,255,255,.06);
-      padding: 24px;
+      background: var(--bg-soft);
       box-shadow: var(--shadow);
+      padding: 18px;
+      overflow: hidden;
     }
 
-    .quick-card h2 {
-      font-size: 18px;
-      margin-bottom: 14px;
+    .headshot-wrap {
+      position: relative;
+      border-radius: 26px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,.14);
+      aspect-ratio: 1 / 1;
+      background: #0f0f0f;
     }
 
-    .quick-list {
-      display: grid;
+    .headshot-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      filter: saturate(1.05) contrast(1.02);
+    }
+
+    .profile-caption {
+      display: flex;
+      justify-content: space-between;
       gap: 12px;
-      margin: 0;
-      padding: 0;
-      list-style: none;
+      align-items: center;
+      margin-top: 16px;
     }
 
-    .quick-list li {
-      padding: 12px 13px;
-      border-radius: 15px;
-      background: rgba(255,255,255,.07);
-      border: 1px solid rgba(255,255,255,.09);
+    .profile-caption h2 {
+      font-size: 20px;
+      letter-spacing: -.04em;
+    }
+
+    .profile-caption p {
+      margin: 4px 0 0;
       color: var(--muted);
       font-size: 14px;
     }
 
-    .section {
-      padding: 38px 0;
+    .status-pill {
+      white-space: nowrap;
+      color: #071108;
+      background: var(--green-bright);
+      border-radius: 999px;
+      padding: 8px 10px;
+      font-weight: 950;
+      font-size: 12px;
     }
 
-    .section-header {
+    .signal-card {
+      border: 1px solid var(--line-green);
+      border-radius: var(--radius-xl);
+      background:
+        radial-gradient(circle at 76% 8%, rgba(30,215,96,.18), transparent 34%),
+        linear-gradient(135deg, var(--tile-2), var(--tile-3));
+      padding: 24px;
+    }
+
+    .signal-card h2 {
+      font-size: 26px;
+      letter-spacing: -.05em;
+    }
+
+    .signal-card p {
+      color: #dcffe7;
+      margin-bottom: 0;
+    }
+
+    .contact-row {
       display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 18px;
+    }
+
+    .contact-link {
+      text-decoration: none;
+      border: 1px solid var(--line-green);
+      background: rgba(30,215,96,.10);
+      border-radius: 999px;
+      padding: 8px 10px;
+      font-size: 13px;
+      font-weight: 850;
+    }
+
+    .section { padding: 44px 0; }
+
+    .section-header {
+      display: grid;
+      grid-template-columns: .92fr 1.08fr;
+      gap: 24px;
       align-items: end;
-      justify-content: space-between;
-      gap: 18px;
-      margin-bottom: 18px;
+      margin-bottom: 22px;
     }
 
     .section-title {
-      font-size: clamp(28px, 4vw, 42px);
-      letter-spacing: -0.045em;
+      font-size: clamp(32px, 4.7vw, 56px);
+      letter-spacing: -.065em;
     }
 
     .section-kicker {
       color: var(--muted);
       max-width: 720px;
-      margin-top: 10px;
-      font-size: 16px;
+      margin: 0;
+      font-size: 17px;
+    }
+
+    .problem-panel {
+      border: 1px solid var(--line);
+      border-radius: var(--radius-xl);
+      background: var(--bg-soft);
+      padding: clamp(22px, 4vw, 34px);
+      box-shadow: var(--shadow);
+    }
+
+    .problem-panel p {
+      color: var(--muted);
+      max-width: 860px;
+      margin: 14px 0 0;
+      font-size: 17px;
+    }
+
+    .problem-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 22px;
+    }
+
+    .problem-card {
+      border: 1px solid var(--line-green);
+      border-radius: var(--radius-lg);
+      background: linear-gradient(135deg, var(--tile), var(--tile-3));
+      padding: 20px;
+    }
+
+    .problem-card .num {
+      color: var(--green-bright);
+      font-weight: 950;
+      letter-spacing: .12em;
+      font-size: 12px;
+      margin-bottom: 12px;
+    }
+
+    .problem-card h3 {
+      font-size: 20px;
+      letter-spacing: -.04em;
+      margin-bottom: 10px;
+    }
+
+    .problem-card p {
+      color: #dcffe7;
+      margin: 0;
+      font-size: 14px;
     }
 
     .metrics {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(5, 1fr);
       gap: 14px;
     }
 
     .metric {
-      border: 1px solid var(--line);
-      background: var(--card);
+      border: 1px solid var(--line-green);
+      background: linear-gradient(135deg, var(--tile-2), var(--tile-3));
       border-radius: var(--radius-lg);
       padding: 20px;
-      min-height: 134px;
+      min-height: 142px;
     }
 
     .metric .num {
       display: block;
-      font-size: 29px;
+      font-size: 30px;
       font-weight: 950;
-      letter-spacing: -0.055em;
+      letter-spacing: -.055em;
+      color: var(--green-bright);
     }
 
     .metric .label {
       display: block;
-      color: var(--muted);
+      color: #e6f7eb;
       font-size: 13px;
-      margin-top: 6px;
+      margin-top: 8px;
+    }
+
+    .roadmap {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      margin-top: 22px;
+    }
+
+    .roadmap-card {
+      border: 1px solid var(--line-green);
+      background: linear-gradient(135deg, var(--tile-2), var(--tile-3));
+      border-radius: var(--radius-lg);
+      padding: 18px;
+      min-height: 198px;
+    }
+
+    .roadmap-card span {
+      color: var(--green-bright);
+      font-size: 12px;
+      font-weight: 950;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .roadmap-card h3 {
+      font-size: 20px;
+      letter-spacing: -.045em;
+      margin: 10px 0 10px;
+    }
+
+    .roadmap-card ul {
+      margin: 0;
+      padding-left: 18px;
+      color: #e6f7eb;
+      font-size: 13px;
+    }
+
+    .case-grid {
+      display: grid;
+      gap: 16px;
+      margin-top: 22px;
+    }
+
+    .case {
+      display: grid;
+      grid-template-columns: .65fr 1.35fr;
+      gap: 16px;
+      border: 1px solid var(--line);
+      background: var(--bg-soft);
+      border-radius: var(--radius-xl);
+      padding: 16px;
+    }
+
+    .case-title {
+      border-radius: 24px;
+      background: linear-gradient(135deg, var(--tile-2), var(--tile-3));
+      border: 1px solid var(--line-green);
+      padding: 24px;
+      min-height: 220px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .case-title span {
+      color: var(--green-bright);
+      font-size: 12px;
+      font-weight: 950;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .case-title h3 {
+      font-size: clamp(25px, 3vw, 35px);
+      letter-spacing: -.06em;
+      margin-top: 12px;
+    }
+
+    .case-body {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+
+    .case-column {
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: var(--surface);
+      padding: 18px;
+    }
+
+    .case-column h4 {
+      margin: 0 0 8px;
+      font-size: 13px;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--green-bright);
+    }
+
+    .case-column p {
+      color: var(--muted);
+      margin: 0;
+      font-size: 14px;
     }
 
     .timeline {
       position: relative;
       display: grid;
       gap: 14px;
-      margin-top: 20px;
+      margin-top: 22px;
     }
 
     .timeline::before {
@@ -300,8 +563,8 @@
       top: 10px;
       bottom: 10px;
       width: 2px;
-      background: linear-gradient(var(--purple), var(--blue), var(--green));
-      opacity: .7;
+      background: linear-gradient(var(--green-bright), rgba(30,215,96,.25));
+      opacity: .82;
     }
 
     .event {
@@ -315,21 +578,21 @@
       width: 38px;
       height: 38px;
       border-radius: 999px;
-      border: 1px solid rgba(255,255,255,.24);
-      background: linear-gradient(135deg, rgba(139,92,246,.9), rgba(56,189,248,.55));
-      box-shadow: 0 0 0 8px rgba(255,255,255,.04);
+      border: 1px solid var(--line-green);
+      background: linear-gradient(135deg, var(--green-bright), var(--green));
+      box-shadow: 0 0 0 8px rgba(30,215,96,.06);
       margin-top: 16px;
     }
 
     .event-card {
       border: 1px solid var(--line);
-      background: rgba(255,255,255,.075);
+      background: var(--bg-soft);
       border-radius: var(--radius-lg);
-      padding: 19px;
+      padding: 20px;
     }
 
     .event-date {
-      color: #b9d9ff;
+      color: var(--green-bright);
       font-size: 13px;
       font-weight: 950;
       text-transform: uppercase;
@@ -338,7 +601,8 @@
     }
 
     .event h3 {
-      font-size: 20px;
+      font-size: 22px;
+      letter-spacing: -.045em;
       margin-bottom: 8px;
     }
 
@@ -347,50 +611,50 @@
       margin: 0;
     }
 
-    .project-grid {
+    .work-grid, .software-grid, .how-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 16px;
-      margin-top: 18px;
+      margin-top: 22px;
     }
 
-    .project {
+    .work-card, .software-card, .how-card {
       border: 1px solid var(--line);
-      background: linear-gradient(135deg, rgba(255,255,255,.09), rgba(255,255,255,.045));
+      background: var(--bg-soft);
       border-radius: var(--radius-lg);
       padding: 20px;
-      min-height: 242px;
       position: relative;
       overflow: hidden;
     }
 
-    .project::before {
+    .work-card::before,
+    .software-card::before,
+    .how-card::before {
       content: "";
       position: absolute;
       inset: 0 0 auto 0;
-      height: 4px;
-      background: linear-gradient(90deg, var(--purple), var(--blue));
-      opacity: .88;
+      height: 5px;
+      background: linear-gradient(90deg, var(--green-bright), rgba(30,215,96,.35));
     }
 
-    .project h3 {
-      font-size: 19px;
-      margin-bottom: 10px;
-      padding-top: 6px;
+    .work-card h3, .software-card h3, .how-card h3 {
+      font-size: 20px;
+      letter-spacing: -.045em;
+      margin: 8px 0 10px;
     }
 
-    .project p,
-    .project li {
+    .work-card p, .software-card p, .how-card p,
+    .work-card li, .software-card li {
       color: var(--muted);
       font-size: 14px;
     }
 
-    .project ul {
-      margin: 10px 0 0 19px;
+    .work-card ul, .software-card ul {
+      margin: 10px 0 0 18px;
       padding: 0;
     }
 
-    .tags {
+    .stack-tags {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
@@ -398,40 +662,13 @@
     }
 
     .tag {
-      display: inline-flex;
+      border: 1px solid var(--line-green);
+      background: var(--green-soft);
+      color: #e4ffe9;
       border-radius: 999px;
-      border: 1px solid rgba(255,255,255,.14);
-      background: rgba(255,255,255,.07);
-      color: #dbe7ff;
       padding: 6px 9px;
       font-size: 12px;
-      font-weight: 750;
-    }
-
-    .software-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-      margin-top: 18px;
-    }
-
-    .software-card {
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,.065);
-      border-radius: var(--radius-lg);
-      padding: 20px;
-      min-height: 236px;
-    }
-
-    .software-card h3 {
-      font-size: 19px;
-      margin-bottom: 10px;
-    }
-
-    .software-card p,
-    .software-card li {
-      color: var(--muted);
-      font-size: 14px;
+      font-weight: 850;
     }
 
     .repo-row {
@@ -446,99 +683,108 @@
       display: inline-flex;
       align-items: center;
       border-radius: 999px;
-      border: 1px solid rgba(255,255,255,.16);
-      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.075);
       padding: 8px 11px;
       font-size: 13px;
-      font-weight: 850;
+      font-weight: 900;
+    }
+
+    .repo-link.live {
+      color: #071108;
+      background: var(--green-bright);
+      border-color: transparent;
     }
 
     .status {
       display: inline-flex;
       margin-top: 10px;
-      color: #ffdca3;
+      color: #d7ffe0;
       font-size: 13px;
-      font-weight: 800;
+      font-weight: 850;
     }
 
-    .inventory {
+    .now {
+      border: 1px solid var(--line-green);
+      border-radius: var(--radius-xl);
+      background:
+        radial-gradient(circle at 78% 14%, rgba(30,215,96,.17), transparent 32%),
+        linear-gradient(135deg, var(--tile-2), var(--tile-3));
+      box-shadow: var(--shadow);
+      padding: clamp(24px, 4vw, 38px);
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-      margin-top: 18px;
+      grid-template-columns: 1fr .75fr;
+      gap: 28px;
+      align-items: center;
+      margin-top: 22px;
     }
 
-    details {
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,.065);
-      border-radius: var(--radius-lg);
-      overflow: hidden;
+    .now h3 {
+      font-size: clamp(30px, 4vw, 48px);
+      letter-spacing: -.065em;
     }
 
-    summary {
-      cursor: pointer;
-      list-style: none;
-      padding: 18px 20px;
-      font-weight: 950;
-      color: #f8fbff;
+    .now p {
+      color: #defde6;
+      margin-bottom: 0;
+      font-size: 17px;
     }
 
-    summary::-webkit-details-marker { display: none; }
-
-    details .body {
-      padding: 0 20px 20px;
-      color: var(--muted);
-      border-top: 1px solid rgba(255,255,255,.08);
-    }
-
-    details ul {
-      margin: 14px 0 0 20px;
-      padding: 0;
-    }
-
-    .callout {
-      border: 1px solid rgba(56,189,248,.28);
-      background: rgba(56,189,248,.08);
-      border-radius: var(--radius-lg);
-      padding: 20px;
-      color: #d9efff;
-      margin-top: 18px;
-    }
-
-    .pill-row {
-      display: flex;
-      flex-wrap: wrap;
+    .mock-panel {
+      border: 1px solid rgba(255,255,255,.14);
+      border-radius: 24px;
+      background: rgba(18,18,18,.55);
+      padding: 16px;
+      display: grid;
       gap: 10px;
-      margin-top: 16px;
     }
 
-    .pill {
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,.07);
-      color: #dbe7ff;
-      border-radius: 999px;
-      padding: 8px 11px;
-      font-size: 13px;
-      font-weight: 800;
+    .mock-row {
+      border: 1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.06);
+      border-radius: 16px;
+      padding: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      color: #eaffef;
+      font-size: 14px;
+    }
+
+    .mock-row span {
+      color: var(--green-bright);
+      font-weight: 950;
     }
 
     .footer {
-      padding: 46px 0 70px;
+      padding: 50px 0 74px;
       color: var(--muted);
       text-align: center;
       font-size: 14px;
     }
 
-    @media (max-width: 940px) {
+    @media (max-width: 1040px) {
       .hero-grid,
-      .inventory {
+      .section-header,
+      .case,
+      .now {
         grid-template-columns: 1fr;
       }
 
-      .metrics,
-      .project-grid,
-      .software-grid {
+      .metrics, .roadmap {
         grid-template-columns: repeat(2, 1fr);
+      }
+
+      .problem-grid,
+      .work-grid,
+      .software-grid,
+      .how-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .case-body {
+        grid-template-columns: 1fr;
       }
 
       .nav-inner {
@@ -549,22 +795,26 @@
       .nav-links {
         justify-content: flex-start;
       }
+
+      .hero-main {
+        min-height: auto;
+      }
     }
 
     @media (max-width: 640px) {
+      .hero { padding-top: 50px; }
+
+      .hero-bottom,
       .metrics,
-      .project-grid,
-      .software-grid {
+      .roadmap,
+      .problem-grid,
+      .work-grid,
+      .software-grid,
+      .how-grid {
         grid-template-columns: 1fr;
       }
 
-      .hero {
-        padding-top: 54px;
-      }
-
-      .timeline::before {
-        left: 14px;
-      }
+      .timeline::before { left: 14px; }
 
       .event {
         grid-template-columns: 46px 1fr;
@@ -574,9 +824,15 @@
         width: 30px;
         height: 30px;
       }
+
+      .profile-caption {
+        align-items: flex-start;
+        flex-direction: column;
+      }
     }
   </style>
 </head>
+
 <body>
   <nav class="nav" aria-label="Primary navigation">
     <div class="nav-inner">
@@ -585,11 +841,12 @@
         <span>JM Ops Portfolio</span>
       </a>
       <div class="nav-links">
-        <a href="#snapshot">Snapshot</a>
+        <a href="#proof">Proof</a>
+        <a href="#roadmap">Roadmap</a>
+        <a href="#cases">Case Studies</a>
         <a href="#timeline">Timeline</a>
-        <a href="#projects">Projects</a>
-        <a href="#software">SWE Roots</a>
         <a href="#work">Work Inventory</a>
+        <a href="#foundation">Technical Foundation</a>
       </div>
     </div>
   </nav>
@@ -597,55 +854,121 @@
   <main id="top">
     <section class="hero page">
       <div class="hero-grid">
-        <div class="hero-card">
-          <div class="eyebrow">Technical Operations • Knowledge Systems • Enablement</div>
-          <h1><span class="gradient-text">Jake Matillano</span><br />Technical Operations Portfolio</h1>
-          <p class="hero-copy">
-            I turn messy support patterns into clear workflows, training resources, knowledge systems,
-            and escalation paths that make teams faster, more consistent, and easier to scale.
-          </p>
-          <div class="hero-actions">
-            <a class="button primary" href="#projects">View Impact Areas</a>
-            <a class="button" href="#software">See SWE Projects</a>
+        <div class="hero-main">
+          <div>
+            <div class="eyebrow">Technical Operations • Knowledge Systems • Enablement</div>
+            <h1><span class="gradient-text">I turn support chaos into clear systems.</span></h1>
+            <p class="hero-copy">
+              I’m Jake Matillano — a Senior Service Desk Specialist focused on escalation support,
+              analyst enablement, knowledge base modernization, AI-ready workflows, and technical operations at scale.
+            </p>
+            <div class="hero-actions">
+              <a class="button primary" href="#roadmap">View contributions</a>
+              <a class="button" href="mailto:jakematillano.z@gmail.com">Email me</a>
+              <a class="button" href="https://www.linkedin.com/in/jake-matillano/" target="_blank" rel="noreferrer">LinkedIn</a>
+              <a class="button" href="https://github.com/jdoofey" target="_blank" rel="noreferrer">GitHub</a>
+            </div>
+          </div>
+
+          <div class="hero-bottom" aria-label="Quick proof points">
+            <div class="mini-proof">
+              <strong>8,000+</strong>
+              <span>restaurant support environment</span>
+            </div>
+            <div class="mini-proof">
+              <strong>50–60+</strong>
+              <span>analysts trained or mentored</span>
+            </div>
+            <div class="mini-proof">
+              <strong>25+</strong>
+              <span>substantial KB/KBB/workflow contributions</span>
+            </div>
           </div>
         </div>
 
-        <aside class="quick-card" aria-label="Portfolio highlights">
-          <h2>What This Portfolio Shows</h2>
-          <ul class="quick-list">
-            <li>Contractor → FTE → L2 growth in roughly two years</li>
-            <li>Training, shadowing, and cross-training standardization</li>
-            <li>Knowledge base modernization across high-impact support areas</li>
-            <li>AI-ready operational workflow documentation</li>
-            <li>SME development across TKDS, international support, and Macromatix</li>
-          </ul>
+        <aside class="profile-stack">
+          <div class="profile-card">
+            <div class="headshot-wrap">
+              <img src="assets/jake-headshot.png" alt="Headshot of Jake Matillano" />
+            </div>
+            <div class="profile-caption">
+              <div>
+                <h2>Jake Matillano</h2>
+                <p>Senior Service Desk Specialist / L2</p>
+              </div>
+              <span class="status-pill">Now building</span>
+            </div>
+            <div class="contact-row">
+              <a class="contact-link" href="mailto:jakematillano.z@gmail.com">Email</a>
+              <a class="contact-link" href="https://www.linkedin.com/in/jake-matillano/" target="_blank" rel="noreferrer">LinkedIn</a>
+              <a class="contact-link" href="https://github.com/jdoofey" target="_blank" rel="noreferrer">GitHub</a>
+            </div>
+          </div>
+
+          <div class="signal-card">
+            <h2>Support, but scalable.</h2>
+            <p>
+              My work sits where troubleshooting, training, documentation, and workflow design overlap:
+              the place where individual fixes become repeatable team systems.
+            </p>
+          </div>
         </aside>
       </div>
     </section>
 
-    <section class="section page" id="snapshot">
+    <section class="section page">
+      <div class="problem-panel">
+        <div class="section-label">The operating problem</div>
+        <h2 class="section-title">Good support breaks when knowledge lives only in people’s heads.</h2>
+        <p>
+          My work focuses on turning frontline patterns into clearer routes, better handoffs, stronger training,
+          and documentation that is easier to follow under real call pressure.
+        </p>
+
+        <div class="problem-grid">
+          <article class="problem-card">
+            <div class="num">01</div>
+            <h3>Messy issue signals</h3>
+            <p>Different words for the same issue can create routing confusion and inconsistent troubleshooting.</p>
+          </article>
+          <article class="problem-card">
+            <div class="num">02</div>
+            <h3>Fragmented documentation</h3>
+            <p>Useful steps can exist across articles, tools, and tribal knowledge without a clear decision path.</p>
+          </article>
+          <article class="problem-card">
+            <div class="num">03</div>
+            <h3>Training consistency</h3>
+            <p>New analysts need context, expectations, examples, and escalation judgment — not just steps.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section page" id="proof">
       <div class="section-header">
         <div>
-          <h2 class="section-title">Snapshot</h2>
-          <p class="section-kicker">
-            My strongest work sits at the intersection of troubleshooting, communication, documentation,
-            and team enablement.
-          </p>
+          <div class="section-label">Proof points</div>
+          <h2 class="section-title">A few signals of scope.</h2>
         </div>
       </div>
 
       <div class="metrics">
         <div class="metric">
           <span class="num">2 yrs</span>
-          <span class="label">Contractor to Senior Service Desk Specialist / L2 progression</span>
+          <span class="label">Contractor → FTE → Senior Service Desk Specialist / L2 progression</span>
         </div>
         <div class="metric">
-          <span class="num">2 wks</span>
-          <span class="label">Rapid cross-training ramp-up after starting</span>
+          <span class="num">15ish</span>
+          <span class="label">New-hire cohorts supported across training cycles</span>
         </div>
         <div class="metric">
-          <span class="num">10–15</span>
-          <span class="label">Store-facing chatbot / agent assist modules built</span>
+          <span class="num">50–60+</span>
+          <span class="label">Analysts trained, mentored, or supported</span>
+        </div>
+        <div class="metric">
+          <span class="num">25+</span>
+          <span class="label">Substantial KB/KBB/workflow contributions</span>
         </div>
         <div class="metric">
           <span class="num">Multi-area</span>
@@ -654,14 +977,293 @@
       </div>
     </section>
 
+    <section class="section page" id="roadmap">
+      <div class="section-header">
+        <div>
+          <div class="section-label">Contribution roadmap</div>
+          <h2 class="section-title">Projects and ownership areas at a glance.</h2>
+        </div>
+      </div>
+
+      <div class="roadmap">
+        <article class="roadmap-card">
+          <span>01 • Support</span>
+          <h3>Core Service Desk support</h3>
+          <ul>
+            <li>Contractor → FTE progression</li>
+            <li>Restaurant technology troubleshooting</li>
+            <li>Field escalation support</li>
+            <li>Stakeholder ride-alongs</li>
+          </ul>
+        </article>
+
+        <article class="roadmap-card">
+          <span>02 • Training</span>
+          <h3>New-hire training</h3>
+          <ul>
+            <li>Shadowing guide creation</li>
+            <li>50–60+ analysts supported</li>
+            <li>10–15ish cohorts supported</li>
+            <li>Trainer expectation alignment</li>
+          </ul>
+        </article>
+
+        <article class="roadmap-card">
+          <span>03 • L2 Training</span>
+          <h3>Training restandardization</h3>
+          <ul>
+            <li>L2/supervisor pain-point review</li>
+            <li>Training guide/workflow update</li>
+            <li>Trainer catch-up support</li>
+            <li>Slides and training test updates</li>
+          </ul>
+        </article>
+
+        <article class="roadmap-card">
+          <span>04 • Enablement</span>
+          <h3>Cross-training and eLearning</h3>
+          <ul>
+            <li>Scenario-based cross-training</li>
+            <li>High call-driver examples</li>
+            <li>Two-day training expansion support</li>
+            <li>TKDS simulator support</li>
+          </ul>
+        </article>
+
+        <article class="roadmap-card">
+          <span>05 • Automation</span>
+          <h3>Chatbot / agent assist</h3>
+          <ul>
+            <li>Bobby partnership</li>
+            <li>Annspire workflows</li>
+            <li>Tracks workflows</li>
+            <li>10–15 guided modules</li>
+          </ul>
+        </article>
+
+        <article class="roadmap-card">
+          <span>06 • Knowledge</span>
+          <h3>KB modernization</h3>
+          <ul>
+            <li>25+ substantial contributions</li>
+            <li>Tribal knowledge capture</li>
+            <li>Issue identification flow</li>
+            <li>Escalation-ready handoffs</li>
+          </ul>
+        </article>
+
+        <article class="roadmap-card">
+          <span>07 • SmartHub</span>
+          <h3>SmartHub restructuring</h3>
+          <ul>
+            <li>Issue identification routing</li>
+            <li>Hardware/connectivity layer</li>
+            <li>Cluster/node-health routing</li>
+            <li>Puppet/config routing</li>
+          </ul>
+        </article>
+
+        <article class="roadmap-card">
+          <span>08 • AI</span>
+          <h3>AI workflow KBs</h3>
+          <ul>
+            <li>Operational workflow tests</li>
+            <li>Plain-English routing</li>
+            <li>Intent mapping concepts</li>
+            <li>FAQ and guardrail design</li>
+          </ul>
+        </article>
+
+        <article class="roadmap-card">
+          <span>09 • TKDS</span>
+          <h3>TKDS / Balanced Kitchen</h3>
+          <ul>
+            <li>SME development</li>
+            <li>Balanced Kitchen overview</li>
+            <li>Channel balancing explanation</li>
+            <li>Third-line flow concepts</li>
+          </ul>
+        </article>
+
+        <article class="roadmap-card">
+          <span>10 • Visuals</span>
+          <h3>Workflow diagrams</h3>
+          <ul>
+            <li>SCA troubleshooting flow</li>
+            <li>Kiosk troubleshooting flow</li>
+            <li>Network troubleshooting flow</li>
+            <li>UK PED troubleshooting flow</li>
+          </ul>
+        </article>
+
+        <article class="roadmap-card">
+          <span>11 • Bottlenecks</span>
+          <h3>Troubleshooting flow review</h3>
+          <ul>
+            <li>Visual issue mapping</li>
+            <li>Decision-point cleanup</li>
+            <li>Possible bottleneck identification</li>
+            <li>Cleaner handoff paths</li>
+          </ul>
+        </article>
+
+        <article class="roadmap-card">
+          <span>12 • International</span>
+          <h3>UK/vendor support</h3>
+          <ul>
+            <li>Acrelec escalation</li>
+            <li>GlobalPay and Worldpay</li>
+            <li>Macromatix escalation</li>
+            <li>Menu/kiosk ownership cleanup</li>
+          </ul>
+        </article>
+
+        <article class="roadmap-card">
+          <span>13 • Process</span>
+          <h3>Training Pod framework</h3>
+          <ul>
+            <li>Ticket review model</li>
+            <li>Teams post review model</li>
+            <li>Trend tracking</li>
+            <li>Coaching cycle structure</li>
+          </ul>
+        </article>
+
+        <article class="roadmap-card">
+          <span>14 • Specialist</span>
+          <h3>Macromatix specialist</h3>
+          <ul>
+            <li>New ownership area</li>
+            <li>Support standardization</li>
+            <li>Escalation readiness</li>
+            <li>SME ramp-up</li>
+          </ul>
+        </article>
+
+        <article class="roadmap-card">
+          <span>15 • Leadership</span>
+          <h3>Operational influence</h3>
+          <ul>
+            <li>Veteran FTE floor-monitor exposure</li>
+            <li>Analyst guidance</li>
+            <li>Escalation judgment</li>
+            <li>Team consistency focus</li>
+          </ul>
+        </article>
+
+        <article class="roadmap-card">
+          <span>16 • Foundation</span>
+          <h3>Software engineering roots</h3>
+          <ul>
+            <li>React/Python/Flask projects</li>
+            <li>Node/Express projects</li>
+            <li>UI and workflow thinking</li>
+            <li>Systems-based problem solving</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section page" id="cases">
+      <div class="section-header">
+        <div>
+          <div class="section-label">Featured case studies</div>
+          <h2 class="section-title">From frontline patterns to repeatable systems.</h2>
+        </div>
+      </div>
+
+      <div class="case-grid">
+        <article class="case">
+          <div class="case-title">
+            <span>Case Study 01</span>
+            <h3>Training standardization</h3>
+          </div>
+          <div class="case-body">
+            <div class="case-column">
+              <h4>Problem</h4>
+              <p>Shadowing and onboarding needed clearer structure, consistent expectations, and stronger trainer alignment.</p>
+            </div>
+            <div class="case-column">
+              <h4>Action</h4>
+              <p>Created and later restandardized training guide/workflow content with L2 and supervisor feedback.</p>
+            </div>
+            <div class="case-column">
+              <h4>Impact</h4>
+              <p>Improved trainer alignment, new-hire readiness, and emphasis on the “why” behind troubleshooting.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="case">
+          <div class="case-title">
+            <span>Case Study 02</span>
+            <h3>Chatbot / agent assist</h3>
+          </div>
+          <div class="case-body">
+            <div class="case-column">
+              <h4>Problem</h4>
+              <p>High-volume store-facing issues needed guided workflows that could ask the right questions.</p>
+            </div>
+            <div class="case-column">
+              <h4>Action</h4>
+              <p>Worked heavily with Bobby to create 10–15 modules for common Annspire and Tracks issues.</p>
+            </div>
+            <div class="case-column">
+              <h4>Impact</h4>
+              <p>Converted messy operational issues into structured, step-based decision flows.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="case">
+          <div class="case-title">
+            <span>Case Study 03</span>
+            <h3>Knowledge base modernization</h3>
+          </div>
+          <div class="case-body">
+            <div class="case-column">
+              <h4>Problem</h4>
+              <p>Some support areas relied on tribal knowledge, scattered checks, or unclear escalation boundaries.</p>
+            </div>
+            <div class="case-column">
+              <h4>Action</h4>
+              <p>Restructured documentation around issue identification, hardware checks, and handoff quality.</p>
+            </div>
+            <div class="case-column">
+              <h4>Impact</h4>
+              <p>Made troubleshooting paths easier to follow for newer analysts and complex issue types.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="case">
+          <div class="case-title">
+            <span>Case Study 04</span>
+            <h3>UK / vendor escalation cleanup</h3>
+          </div>
+          <div class="case-body">
+            <div class="case-column">
+              <h4>Problem</h4>
+              <p>Ownership lines across menu changes, kiosk availability, and vendor escalations needed clearer routing.</p>
+            </div>
+            <div class="case-column">
+              <h4>Action</h4>
+              <p>Cleaned up workflows across Acrelec, GlobalPay, Worldpay, Macromatix, and UK menu/kiosk topics.</p>
+            </div>
+            <div class="case-column">
+              <h4>Impact</h4>
+              <p>Clarified routing expectations and strengthened store-facing escalation templates.</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
     <section class="section page" id="timeline">
       <div class="section-header">
         <div>
-          <h2 class="section-title">Career Timeline</h2>
-          <p class="section-kicker">
-            A concise timeline of increasing scope: ramp-up, training influence, documentation ownership,
-            L2 responsibilities, and SME development.
-          </p>
+          <div class="section-label">Timeline</div>
+          <h2 class="section-title">Career growth, condensed.</h2>
         </div>
       </div>
 
@@ -670,8 +1272,8 @@
           <div class="dot" aria-hidden="true"></div>
           <div class="event-card">
             <div class="event-date">March 2024</div>
-            <h3>Contractor Start / Rapid Ramp-Up</h3>
-            <p>Started at Taco Bell Service Desk, became fully cross-trained within approximately two weeks, and quickly built proficiency across restaurant technology support areas and escalation workflows.</p>
+            <h3>Contractor start / rapid ramp-up</h3>
+            <p>Started at Taco Bell Service Desk, became fully cross-trained within approximately two weeks, and built early trust through accurate, efficient troubleshooting.</p>
           </div>
         </article>
 
@@ -679,8 +1281,8 @@
           <div class="dot" aria-hidden="true"></div>
           <div class="event-card">
             <div class="event-date">Mid–Late 2024</div>
-            <h3>Expanded Support & Training Involvement</h3>
-            <p>Learned international queues around the three-month mark, became an early consistent UK Support contributor, began formal training involvement, and created a structured shadowing/training guide from trainer feedback.</p>
+            <h3>Expanded support, training, and stakeholder ride-alongs</h3>
+            <p>Learned international queues, became an early UK Support contributor, began formal training involvement, and was selected for stakeholder ride-alongs due to clear technical explanation and troubleshooting accuracy.</p>
           </div>
         </article>
 
@@ -688,8 +1290,17 @@
           <div class="dot" aria-hidden="true"></div>
           <div class="event-card">
             <div class="event-date">2024–2025</div>
-            <h3>Cross-Training & Enablement</h3>
-            <p>Helped standardize cross-training with scenario-based material targeting high call drivers, partnered on eLearning updates, and helped expand cross-training support to two days.</p>
+            <h3>Training and cross-training standardization</h3>
+            <p>Created structured shadowing materials, supported 50–60+ analysts across roughly 10–15 cohorts, built scenario-based cross-training, and partnered on eLearning/training updates.</p>
+          </div>
+        </article>
+
+        <article class="event">
+          <div class="dot" aria-hidden="true"></div>
+          <div class="event-card">
+            <div class="event-date">Early 2025</div>
+            <h3>Converted to full-time employee</h3>
+            <p>Transitioned from contractor to full-time Service Desk Specialist while continuing to support higher-complexity incidents, training efforts, specialized queues, and peer troubleshooting.</p>
           </div>
         </article>
 
@@ -697,8 +1308,8 @@
           <div class="dot" aria-hidden="true"></div>
           <div class="event-card">
             <div class="event-date">Early–Mid 2025</div>
-            <h3>Chatbot / Agent Assist Development</h3>
-            <p>Worked with leadership to create guided modules for high-impact store-facing Annspire and Tracks issues. The project was later cancelled, but it demonstrated decision-flow thinking and strong platform knowledge.</p>
+            <h3>Chatbot / agent assist development</h3>
+            <p>Worked with Bobby to create guided modules for high-impact store-facing Annspire and Tracks issues.</p>
           </div>
         </article>
 
@@ -706,8 +1317,8 @@
           <div class="dot" aria-hidden="true"></div>
           <div class="event-card">
             <div class="event-date">Late 2025</div>
-            <h3>Operational Exposure & TKDS Training Support</h3>
-            <p>Supported TKDS simulator/eLearning work before it paused and introduced veteran FTE floor-monitoring exposure to build leadership readiness and broader operational awareness.</p>
+            <h3>Operational exposure and TKDS training support</h3>
+            <p>Supported TKDS simulator/eLearning work and introduced veteran FTE floor-monitoring exposure for leadership readiness.</p>
           </div>
         </article>
 
@@ -716,7 +1327,43 @@
           <div class="event-card">
             <div class="event-date">2026</div>
             <h3>Promotion to Senior Service Desk Specialist / L2</h3>
-            <p>Moved into L2 responsibilities focused on escalations, analyst development, training standardization, knowledge base improvement, and SME development.</p>
+            <p>Moved into L2 responsibilities focused on escalations, analyst development, training standardization, documentation strategy, workflow design, and SME development.</p>
+          </div>
+        </article>
+
+        <article class="event">
+          <div class="dot" aria-hidden="true"></div>
+          <div class="event-card">
+            <div class="event-date">2026</div>
+            <h3>New-hire training guide/workflow restandardization</h3>
+            <p>Worked with L2s and supervisors to address training pain points, catch trainers up to speed, and update training slides and the training test.</p>
+          </div>
+        </article>
+
+        <article class="event">
+          <div class="dot" aria-hidden="true"></div>
+          <div class="event-card">
+            <div class="event-date">2026</div>
+            <h3>KB modernization and troubleshooting standardization</h3>
+            <p>Focused on substantial KB/KBB improvements, hardware troubleshooting, issue-identification flow, and escalation-ready handoff quality across multiple support areas.</p>
+          </div>
+        </article>
+
+        <article class="event">
+          <div class="dot" aria-hidden="true"></div>
+          <div class="event-card">
+            <div class="event-date">2026</div>
+            <h3>AI workflow and operational KB support</h3>
+            <p>Created store-facing operational workflow KBs for AI agent testing, including plain-English routing, FAQs, intent-mapping concepts, and guardrail design.</p>
+          </div>
+        </article>
+
+        <article class="event">
+          <div class="dot" aria-hidden="true"></div>
+          <div class="event-card">
+            <div class="event-date">2026</div>
+            <h3>Workflow diagrams and bottleneck identification</h3>
+            <p>Created troubleshooting workflow diagrams for SCA, kiosk, network, and UK PED support to visualize troubleshooting paths and identify possible bottlenecks.</p>
           </div>
         </article>
 
@@ -724,148 +1371,17 @@
           <div class="dot" aria-hidden="true"></div>
           <div class="event-card">
             <div class="event-date">2026 – Current</div>
-            <h3>SME, AI Workflow, and International Support Development</h3>
-            <p>Expanded work across TKDS/Balanced Kitchen, AI workflow KBs, Training Pod concepts, UK/vendor escalation standardization, and new ownership as the Service Desk specialist for Macromatix.</p>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="section page" id="projects">
-      <div class="section-header">
-        <div>
-          <h2 class="section-title">Featured Impact Areas</h2>
-          <p class="section-kicker">
-            These projects best represent my shift from strong individual contributor to someone improving
-            the systems analysts rely on.
-          </p>
-        </div>
-      </div>
-
-      <div class="project-grid">
-        <article class="project">
-          <h3>Training & Onboarding Standardization</h3>
-          <p>Created and later restandardized training guide/workflow content to improve new-hire readiness and trainer consistency.</p>
-          <ul>
-            <li>Day-by-day shadowing structure</li>
-            <li>Trainer and supervisor feedback alignment</li>
-            <li>Training slide and test updates</li>
-            <li>Focus on the “why” behind troubleshooting</li>
-          </ul>
-        </article>
-
-        <article class="project">
-          <h3>Cross-Training & eLearning</h3>
-          <p>Helped build practical training exposure through common-issue scenarios, high call-driver content, and eLearning alignment.</p>
-          <ul>
-            <li>Scenario-based cross-training</li>
-            <li>Two-day cross-training support expansion</li>
-            <li>TKDS simulator/eLearning support</li>
-          </ul>
-        </article>
-
-        <article class="project">
-          <h3>Chatbot / Agent Assist Workflows</h3>
-          <p>Built guided modules for store-facing, high-impact operational issues with a decision-flow mindset.</p>
-          <ul>
-            <li>10–15 fully fleshed out modules</li>
-            <li>Annspire and Tracks workflow focus</li>
-            <li>Structured questions, routes, and steps</li>
-          </ul>
-        </article>
-
-        <article class="project">
-          <h3>Knowledge Base Modernization</h3>
-          <p>Improved documentation by capturing tribal knowledge, standardizing troubleshooting flow, and strengthening escalation readiness.</p>
-          <ul>
-            <li>Hardware troubleshooting standardization</li>
-            <li>Device verification and power-flow logic</li>
-            <li>Cleaner handoff and escalation context</li>
-          </ul>
-        </article>
-
-        <article class="project">
-          <h3>AI Virtual Agent Workflow KBs</h3>
-          <p>Created operational KBs intended for AI agent testing with plain-English decision flows, FAQs, and intent-mapping concepts.</p>
-          <ul>
-            <li>Store-facing operational workflows</li>
-            <li>Common phrasing and metadata support</li>
-            <li>Clear stop/escalation boundaries</li>
-          </ul>
-        </article>
-
-        <article class="project">
-          <h3>SME & Support Ownership</h3>
-          <p>Expanded into TKDS SME work, International Pod support, and Macromatix specialist development.</p>
-          <ul>
-            <li>Balanced Kitchen/TKDS reference work</li>
-            <li>UK/vendor escalation standardization</li>
-            <li>Macromatix ownership ramp-up</li>
-          </ul>
-        </article>
-      </div>
-    </section>
-
-    <section class="section page" id="software">
-      <div class="section-header">
-        <div>
-          <h2 class="section-title">Software Engineering Roots</h2>
-          <p class="section-kicker">
-            My earlier projects are no longer hosted live, but they show the technical foundation behind how I think:
-            build systems, map workflows, design clean interfaces, and solve problems creatively.
-          </p>
-        </div>
-      </div>
-
-      <div class="software-grid">
-        <article class="software-card">
-          <h3>Kalmado</h3>
-          <p>A full-stack project management application inspired by productivity tools like Asana/Trello, built around projects, tasks, and user-owned data.</p>
-          <div class="tags">
-            <span class="tag">React</span>
-            <span class="tag">Redux</span>
-            <span class="tag">Python</span>
-            <span class="tag">Flask</span>
-            <span class="tag">SQLAlchemy</span>
-            <span class="tag">Docker</span>
-          </div>
-          <span class="status">Live demo archived / unavailable</span>
-          <div class="repo-row">
-            <a class="repo-link" href="https://github.com/jdoofey/Kalmado" target="_blank" rel="noreferrer">GitHub Repo</a>
+            <h3>TKDS / Balanced Kitchen SME development</h3>
+            <p>Expanded work across TKDS, Balanced Kitchen reference material, channel balancing explanation, and third-line production flow concepts.</p>
           </div>
         </article>
 
-        <article class="software-card">
-          <h3>Nope</h3>
-          <p>A Yelp-inspired group project with business pages, user reviews, ownership flows, search functionality, and map-based location context.</p>
-          <div class="tags">
-            <span class="tag">React</span>
-            <span class="tag">Redux</span>
-            <span class="tag">Python</span>
-            <span class="tag">Flask</span>
-            <span class="tag">Fuse.js</span>
-            <span class="tag">Google Maps API</span>
-          </div>
-          <span class="status">Live demo archived / unavailable</span>
-          <div class="repo-row">
-            <a class="repo-link" href="https://github.com/Samsuhhh/Nope-Yelp" target="_blank" rel="noreferrer">GitHub Repo</a>
-          </div>
-        </article>
-
-        <article class="software-card">
-          <h3>TuneNimbus</h3>
-          <p>An audio distribution and music sharing application focused on song uploads, playlists, discovery, and listening experiences.</p>
-          <div class="tags">
-            <span class="tag">React</span>
-            <span class="tag">Redux</span>
-            <span class="tag">JavaScript</span>
-            <span class="tag">Express</span>
-            <span class="tag">Node.js</span>
-            <span class="tag">Sequelize</span>
-          </div>
-          <span class="status">Live demo archived / unavailable</span>
-          <div class="repo-row">
-            <a class="repo-link" href="https://github.com/jdoofey/TuneNimbus" target="_blank" rel="noreferrer">GitHub Repo</a>
+        <article class="event">
+          <div class="dot" aria-hidden="true"></div>
+          <div class="event-card">
+            <div class="event-date">2026 – Current</div>
+            <h3>International support and Macromatix specialist development</h3>
+            <p>Continued UK/vendor escalation standardization and began ramping into Macromatix Service Desk specialist ownership.</p>
           </div>
         </article>
       </div>
@@ -874,106 +1390,199 @@
     <section class="section page" id="work">
       <div class="section-header">
         <div>
-          <h2 class="section-title">Selected Work Inventory</h2>
-          <p class="section-kicker">
-            Public-safe categories of work. Internal article IDs, ticket links, store data, and sensitive process details are intentionally excluded.
-          </p>
+          <div class="section-label">Selected work inventory</div>
+          <h2 class="section-title">All major contribution areas.</h2>
         </div>
       </div>
 
-      <div class="inventory">
-        <details open>
-          <summary>Domestic / General Support Documentation</summary>
-          <div class="body">
-            <ul>
-              <li>TKDS no-network, Android reset, bump bar, black screen, and line-printer troubleshooting</li>
-              <li>Annspire order synchronization, POS offline, and cash-management workflows</li>
-              <li>BOH power, monitor/display, browser/cache/DNS, disaster recovery, and system-time issues</li>
-              <li>Kiosk power troubleshooting and SCA/payment-device support workflows</li>
-              <li>Managed/unmanaged device verification and static-discharge guidance</li>
-              <li>P630 support process</li>
-            </ul>
-          </div>
-        </details>
+      <div class="work-grid">
+        <article class="work-card">
+          <h3>Domestic / general support documentation</h3>
+          <ul>
+            <li>TKDS no-network, Android reset, bump bar, black screen, and line-printer troubleshooting</li>
+            <li>Annspire order sync, POS offline, and cash-management workflows</li>
+            <li>BOH power, monitor/display, browser/cache/DNS, disaster recovery, and system-time issues</li>
+            <li>Kiosk power, SCA/payment devices, device verification, static discharge, and P630 support process</li>
+          </ul>
+        </article>
 
-        <details>
-          <summary>SmartHub / Infrastructure-Adjacent KB Strategy</summary>
-          <div class="body">
-            <ul>
-              <li>Issue identification and routing structure</li>
-              <li>Hardware and connectivity troubleshooting centralization</li>
-              <li>Network/connectivity validation flow</li>
-              <li>Cluster and node-health routing</li>
-              <li>Puppet, config, and ris-config routing improvements</li>
-            </ul>
-          </div>
-        </details>
+        <article class="work-card">
+          <h3>SmartHub / infrastructure-adjacent strategy</h3>
+          <ul>
+            <li>Issue identification and routing structure</li>
+            <li>Hardware and connectivity troubleshooting centralization</li>
+            <li>Network/connectivity validation flow</li>
+            <li>Cluster and node-health routing</li>
+            <li>Puppet, config, and ris-config routing improvements</li>
+          </ul>
+        </article>
 
-        <details>
-          <summary>AI Workflow / Operational KBs</summary>
-          <div class="body">
-            <ul>
-              <li>Tracks Timekeeping Assistance operational workflow</li>
-              <li>Annspire Open or Floated Drawer Assistance operational workflow</li>
-              <li>Tracks Credit Purchase Order workflow</li>
-              <li>Tracks ICOS / High Difference / Variance assistance workflow</li>
-              <li>Intent mapping, common store phrasing, and metadata/tag support</li>
-            </ul>
-          </div>
-        </details>
+        <article class="work-card">
+          <h3>Training / enablement</h3>
+          <ul>
+            <li>Shadowing guide creation</li>
+            <li>Training guide/workflow restandardization</li>
+            <li>Trainer alignment and pain-point review</li>
+            <li>Training slides and training test updates</li>
+            <li>Training Pod review framework</li>
+          </ul>
+        </article>
 
-        <details>
-          <summary>UK Support / Vendor Escalation Standardization</summary>
-          <div class="body">
-            <ul>
-              <li>Acrelec, GlobalPay, Worldpay, and Macromatix escalation documentation</li>
-              <li>UK kiosk and vendor escalation workflow cleanup</li>
-              <li>UK menu change ownership clarification for POS/kiosk/both scenarios</li>
-              <li>UK kiosk menu item availability / LMS Console ownership clarification</li>
-              <li>Store-facing escalation template improvements, including store number and address requirements</li>
-            </ul>
-          </div>
-        </details>
+        <article class="work-card">
+          <h3>AI workflow / operational KBs</h3>
+          <ul>
+            <li>Tracks Timekeeping Assistance workflow</li>
+            <li>Annspire Open or Floated Drawer Assistance workflow</li>
+            <li>Tracks Credit Purchase Order workflow</li>
+            <li>Tracks ICOS / High Difference / Variance workflow</li>
+            <li>Intent mapping and common store phrasing</li>
+          </ul>
+        </article>
+
+        <article class="work-card">
+          <h3>TKDS / Balanced Kitchen</h3>
+          <ul>
+            <li>Balanced Kitchen overview and reference material</li>
+            <li>Channel balancing and line assignment explanation</li>
+            <li>Third-line / relief-valve production flow concepts</li>
+            <li>TKDS workflow explanation and SME development</li>
+          </ul>
+        </article>
+
+        <article class="work-card">
+          <h3>UK support / vendor escalation</h3>
+          <ul>
+            <li>Acrelec, GlobalPay, Worldpay, and Macromatix escalation documentation</li>
+            <li>UK kiosk and vendor escalation workflow cleanup</li>
+            <li>UK menu change ownership clarification for POS/kiosk/both scenarios</li>
+            <li>UK kiosk menu item availability / LMS Console ownership clarification</li>
+            <li>Store-facing escalation template improvements</li>
+          </ul>
+        </article>
+
+        <article class="work-card">
+          <h3>Workflow diagrams / bottleneck review</h3>
+          <ul>
+            <li>SCA troubleshooting workflow diagrams</li>
+            <li>Kiosk troubleshooting workflow diagrams</li>
+            <li>Network troubleshooting workflow diagrams</li>
+            <li>UK PED troubleshooting workflow diagrams</li>
+            <li>Visual maps to identify possible troubleshooting bottlenecks</li>
+          </ul>
+        </article>
       </div>
     </section>
 
-    <section class="section page" id="themes">
+    <section class="section page" id="foundation">
       <div class="section-header">
         <div>
-          <h2 class="section-title">Operating Themes</h2>
-          <p class="section-kicker">
-            The leadership story: moving from personal execution to scalable team enablement.
-          </p>
+          <div class="section-label">Technical foundation</div>
+          <h2 class="section-title">Software engineering roots.</h2>
         </div>
       </div>
 
-      <div class="pill-row">
-        <span class="pill">Technical operations</span>
-        <span class="pill">Escalation readiness</span>
-        <span class="pill">Knowledge management</span>
-        <span class="pill">Training design</span>
-        <span class="pill">Workflow standardization</span>
-        <span class="pill">AI-ready documentation</span>
-        <span class="pill">SME development</span>
-        <span class="pill">Vendor escalation</span>
-        <span class="pill">International support</span>
-        <span class="pill">Process ownership</span>
-        <span class="pill">React</span>
-        <span class="pill">Python</span>
-        <span class="pill">Flask</span>
-        <span class="pill">Node.js</span>
+      <div class="software-grid">
+        <article class="software-card">
+          <h3>Kalmado</h3>
+          <p>A full-stack project management application built around projects, tasks, and user-owned data.</p>
+          <div class="stack-tags">
+            <span class="tag">React</span>
+            <span class="tag">Redux</span>
+            <span class="tag">Python</span>
+            <span class="tag">Flask</span>
+            <span class="tag">SQLAlchemy</span>
+            <span class="tag">Docker</span>
+          </div>
+          <span class="status">Live project retained</span>
+          <div class="repo-row">
+            <a class="repo-link live" href="https://kalmado.herokuapp.com/" target="_blank" rel="noreferrer">Live Site</a>
+            <a class="repo-link" href="https://github.com/jdoofey/Kalmado" target="_blank" rel="noreferrer">GitHub Repo</a>
+          </div>
+        </article>
+
+        <article class="software-card">
+          <h3>Nope</h3>
+          <p>A Yelp-inspired group project with business pages, user reviews, ownership flows, search functionality, and map-based location context.</p>
+          <div class="stack-tags">
+            <span class="tag">React</span>
+            <span class="tag">Redux</span>
+            <span class="tag">Python</span>
+            <span class="tag">Flask</span>
+            <span class="tag">Fuse.js</span>
+            <span class="tag">Google Maps API</span>
+          </div>
+          <span class="status">Repo retained</span>
+          <div class="repo-row">
+            <a class="repo-link" href="https://github.com/Samsuhhh/Nope-Yelp" target="_blank" rel="noreferrer">GitHub Repo</a>
+          </div>
+        </article>
+
+        <article class="software-card">
+          <h3>TuneNimbus</h3>
+          <p>An audio distribution and music sharing application focused on uploads, playlists, discovery, and listening experiences.</p>
+          <div class="stack-tags">
+            <span class="tag">React</span>
+            <span class="tag">Redux</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">Express</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">Sequelize</span>
+          </div>
+          <span class="status">Live project retained</span>
+          <div class="repo-row">
+            <a class="repo-link live" href="https://tunenimbus.herokuapp.com/" target="_blank" rel="noreferrer">Live Site</a>
+            <a class="repo-link" href="https://github.com/jdoofey/TuneNimbus" target="_blank" rel="noreferrer">GitHub Repo</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section page">
+      <div class="section-header">
+        <div>
+          <div class="section-label">How I work</div>
+          <h2 class="section-title">Plain-English systems thinking.</h2>
+        </div>
       </div>
 
-      <div class="callout">
-        <strong>Positioning statement:</strong>
-        I improve support systems by turning frontline troubleshooting patterns into clear workflows,
-        documentation standards, and training resources that help teams operate with more confidence and consistency.
+      <div class="how-grid">
+        <article class="how-card">
+          <h3>I simplify messy systems.</h3>
+          <p>I look for the actual decision points behind recurring issues and turn them into clearer paths.</p>
+        </article>
+        <article class="how-card">
+          <h3>I document the why.</h3>
+          <p>Steps matter, but analysts improve faster when they understand what each step proves or rules out.</p>
+        </article>
+        <article class="how-card">
+          <h3>I build for handoff.</h3>
+          <p>Good support documentation should help the next person continue the work without starting from zero.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section page">
+      <div class="now">
+        <div>
+          <div class="section-label">Now building</div>
+          <h3>Macromatix specialist development</h3>
+          <p>
+            Currently ramping into Service Desk specialist ownership for Macromatix, with focus on support standardization,
+            escalation readiness, vendor workflow clarity, and stronger operational knowledge around the platform.
+          </p>
+        </div>
+        <div class="mock-panel" aria-label="Current focus areas">
+          <div class="mock-row"><strong>Support standardization</strong><span>active</span></div>
+          <div class="mock-row"><strong>Escalation readiness</strong><span>building</span></div>
+          <div class="mock-row"><strong>Workflow clarity</strong><span>in progress</span></div>
+          <div class="mock-row"><strong>SME development</strong><span>ramping</span></div>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="footer page">
-    <p>Built as a public-safe portfolio page. No internal links, ticket data, store-specific information, or confidential process details included.</p>
+    <p>Public-safe portfolio page. Internal links, ticket data, store-specific information, and confidential process details are intentionally excluded.</p>
   </footer>
 </body>
 </html>
