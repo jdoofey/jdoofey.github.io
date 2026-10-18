@@ -831,7 +831,38 @@
       }
     }
   </style>
-</head>
+<style>
+/* Director review: compact, responsive hero without unused card space */
+:root { --max: 1480px; }
+.hero { padding: 42px 0 24px; }
+.hero-grid { grid-template-columns: minmax(0, 1.55fr) minmax(300px, .65fr); align-items: start; gap: 20px; }
+.hero-main { min-height: 0; padding: clamp(26px, 3.2vw, 44px); gap: 34px; }
+.hero-main h1 { font-size: clamp(36px, 4.1vw, 62px); letter-spacing: -.055em; max-width: 920px; }
+.hero-copy { font-size: clamp(16px, 1.4vw, 19px); max-width: 800px; margin-top: 18px; }
+.hero-bottom { margin-top: 4px; }
+.profile-stack { align-content: start; gap: 16px; }
+.profile-card { padding: 18px; }
+.headshot-wrap { aspect-ratio: 16 / 9; max-height: 230px; }
+.headshot-wrap img { object-position: center 30%; }
+.signal-card { padding: 22px; }
+.signal-card h2 { font-size: 23px; }
+.signal-card p { font-size: 14px; }
+.section { padding: 32px 0; }
+@media (max-width: 1040px) { .hero-grid { grid-template-columns: 1fr; } .profile-stack { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 640px) { .profile-stack { grid-template-columns: 1fr; } .hero-main h1 { font-size: clamp(34px, 9vw, 46px); } .hero-bottom { grid-template-columns: 1fr; } }
+</style><style>
+/* Director review: prioritized contributions, reduced visual noise */
+#roadmap .roadmap{grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+#roadmap .leadership-pillar{min-height:0;padding:24px;background:linear-gradient(150deg,#18452f,#11291e)}
+#roadmap .leadership-pillar h3{font-size:clamp(21px,2vw,27px);line-height:1.2;margin:12px 0 16px}
+#roadmap .leadership-pillar ul{font-size:14px;line-height:1.65}
+#roadmap .leadership-pillar li+li{margin-top:12px}
+.hero-main h1{font-size:clamp(37px,4.4vw,61px);line-height:1.07;letter-spacing:-.055em}
+.hero-main{min-height:0}
+.profile-stack{align-content:start}
+.signal-card{min-height:0}
+@media(max-width:980px){#roadmap .roadmap{grid-template-columns:1fr}}
+</style></head>
 <body>
 <nav aria-label="Primary navigation" class="nav">
 <div class="nav-inner">
@@ -855,16 +886,10 @@
 <div class="hero-main">
 <div>
 <div class="eyebrow">Technical Operations • Knowledge Systems • Enablement</div>
-<h1><span class="gradient-text">Improving service desk operations through documentation, training, and technical support.</span></h1>
-<p class="hero-copy">
-              I’m Jake Matillano, a Senior Service Desk Specialist supporting technical escalations,
-              analyst development, knowledge management, workflow standardization, and cross-team service operations.
-            </p>
+<h1>Operational leadership through technical execution, process improvement, and analyst development.</h1>
+<p class="hero-copy">Senior Service Desk Specialist (L2) contributing to service delivery, incident escalation, knowledge governance, and workforce enablement. I translate frontline operational needs into documented standards, repeatable workflows, and more effective analyst development.</p>
 <div class="hero-actions">
 <a class="button primary" href="#roadmap">View initiatives</a>
-<a class="button" href="mailto:jakematillano.z@gmail.com">Email me</a>
-<a class="button" href="https://www.linkedin.com/in/jake-matillano/" rel="noreferrer" target="_blank">LinkedIn</a>
-<a class="button" href="https://github.com/jdoofey" rel="noreferrer" target="_blank">GitHub</a>
 </div>
 </div>
 <div aria-label="Quick proof points" class="hero-bottom">
@@ -892,7 +917,6 @@
 <h2>Jake Matillano</h2>
 <p>Senior Service Desk Specialist / L2</p>
 </div>
-<span class="status-pill">Current focus</span>
 </div>
 <div class="contact-row">
 <a class="contact-link" href="mailto:jakematillano.z@gmail.com">Email</a>
@@ -901,11 +925,8 @@
 </div>
 </div>
 <div class="signal-card">
-<h2>Operational focus</h2>
-<p>
-              I work across technical troubleshooting, analyst training, and process documentation,
-              with an emphasis on consistent execution and clear escalation ownership.
-            </p>
+<h2>Operational priorities</h2>
+<p>Strengthening service consistency through cross-functional coordination, technical escalation support, and practical standards that analysts can apply on live calls.</p>
 </div>
 </aside>
 </div>
@@ -970,258 +991,97 @@
 <section class="section page" id="roadmap">
 <div class="section-header">
 <div>
-<div class="section-label">Contribution roadmap</div>
-<h2 class="section-title">Selected initiatives and responsibilities</h2>
+<div class="section-label">Leadership contributions</div>
+<h2 class="section-title">Three areas of operational impact</h2>
 </div>
-</div>
-<div class="roadmap">
-<article class="roadmap-card">
-<span>01 • Support</span>
-<h3>Core Service Desk support</h3>
-<ul>
-<li>Contractor → FTE progression</li>
-<li>Restaurant technology troubleshooting</li>
-<li>Field escalation support</li>
-<li>Stakeholder ride-alongs</li>
-</ul>
-</article>
-<article class="roadmap-card">
-<span>02 • Training</span>
-<h3>New-hire training</h3>
-<ul>
-<li>Shadowing guide creation</li>
-<li>50–60+ analysts supported</li>
-<li>10–10–15 cohorts supported</li>
-<li>Trainer expectation alignment</li>
-</ul>
-</article>
-<article class="roadmap-card">
-<span>03 • L2 Training</span>
-<h3>Training restandardization</h3>
-<ul>
-<li>L2/supervisor pain-point review</li>
-<li>Training guide/workflow update</li>
-<li>Trainer catch-up support</li>
-<li>Slides and training test updates</li>
-</ul>
-</article>
-<article class="roadmap-card">
-<span>04 • Enablement</span>
-<h3>Cross-training and eLearning</h3>
-<ul>
-<li>Scenario-based cross-training</li>
-<li>High call-driver examples</li>
-<li>Two-day training expansion support</li>
-<li>TKDS simulator support</li>
-</ul>
-</article>
-<article class="roadmap-card">
-<span>05 • Automation</span>
-<h3>Chatbot / agent assist</h3>
-<ul>
-<li>Bobby partnership</li>
-<li>Annspire workflows</li>
-<li>Tracks workflows</li>
-<li>10–15 guided modules</li>
-</ul>
-</article>
-<article class="roadmap-card">
-<span>06 • Knowledge</span>
-<h3>KB modernization</h3>
-<ul>
-<li>25+ substantial contributions</li>
-<li>Tribal knowledge capture</li>
-<li>Issue identification flow</li>
-<li>Escalation-ready handoffs</li>
-</ul>
-</article>
-<article class="roadmap-card">
-<span>07 • SmartHub</span>
-<h3>SmartHub restructuring</h3>
-<ul>
-<li>Issue identification routing</li>
-<li>Hardware/connectivity layer</li>
-<li>Cluster/node-health routing</li>
-<li>Puppet/config routing</li>
-</ul>
-</article>
-<article class="roadmap-card">
-<span>08 • AI</span>
-<h3>AI workflow KBs</h3>
-<ul>
-<li>Operational workflow tests</li>
-<li>Plain-English routing</li>
-<li>Intent mapping concepts</li>
-<li>FAQ and guardrail design</li>
-</ul>
-</article>
-<article class="roadmap-card">
-<span>09 • TKDS</span>
-<h3>TKDS / Balanced Kitchen</h3>
-<ul>
-<li>SME development</li>
-<li>Balanced Kitchen overview</li>
-<li>Channel balancing explanation</li>
-<li>Third-line flow concepts</li>
-</ul>
-</article>
-<article class="roadmap-card">
-<span>10 • Visuals</span>
-<h3>Workflow diagrams</h3>
-<ul>
-<li>SCA troubleshooting flow</li>
-<li>Kiosk troubleshooting flow</li>
-<li>Network troubleshooting flow</li>
-<li>UK PED troubleshooting flow</li>
-</ul>
-</article>
-<article class="roadmap-card">
-<span>11 • Bottlenecks</span>
-<h3>Troubleshooting flow review</h3>
-<ul>
-<li>Visual issue mapping</li>
-<li>Decision-point cleanup</li>
-<li>Possible bottleneck identification</li>
-<li>Cleaner handoff paths</li>
-</ul>
-</article>
-<article class="roadmap-card">
-<span>12 • International</span>
-<h3>UK/vendor support</h3>
-<ul>
-<li>Acrelec escalation</li>
-<li>GlobalPay and Worldpay</li>
-<li>Macromatix escalation</li>
-<li>Menu/kiosk ownership cleanup</li>
-</ul>
-</article>
-<article class="roadmap-card">
-<span>13 • Process</span>
-<h3>Training Pod framework</h3>
-<ul>
-<li>Ticket review model</li>
-<li>Teams post review model</li>
-<li>Trend tracking</li>
-<li>Coaching cycle structure</li>
-</ul>
-</article>
-<article class="roadmap-card">
-<span>14 • Specialist</span>
-<h3>Macromatix specialist</h3>
-<ul>
-<li>New ownership area</li>
-<li>Support standardization</li>
-<li>Escalation readiness</li>
-<li>SME ramp-up</li>
-</ul>
-</article>
-<article class="roadmap-card"><span>2026 • Analyst enablement</span><h3>Call ownership standards</h3><p style="font-size:13px;color:#e6f7eb">Partnered with Knowledge &amp; Training to clarify which calls analysts should own, transfer, or escalate; aligned documentation with operational expectations.</p></article><article class="roadmap-card"><span>2026 • Analyst enablement</span><h3>ServiceNow ticket lifecycle guide</h3><p style="font-size:13px;color:#e6f7eb">Coordinating development of a consolidated new-hire reference covering intake, existing-ticket checks, knowledge search, documentation, PRB linkage, escalation, and resolution.</p></article><article class="roadmap-card"><span>2026 • Analyst enablement</span><h3>Week 2 platform presentations</h3><p style="font-size:13px;color:#e6f7eb">Collaborating with Knowledge &amp; Training pod on trainer-led technology presentations to reinforce Week 1 learning and address topics not encountered during live shadowing.</p></article><article class="roadmap-card">
-<span>15 • Leadership</span>
-<h3>Operational influence</h3>
-<ul>
-<li>Veteran FTE floor-monitor exposure</li>
-<li>Analyst guidance</li>
-<li>Escalation judgment</li>
-<li>Team consistency focus</li>
-</ul>
-</article>
-<article class="roadmap-card">
-<span>16 • Foundation</span>
-<h3>Software engineering roots</h3>
-<ul>
-<li>React/Python/Flask projects</li>
-<li>Node/Express projects</li>
-<li>UI and workflow thinking</li>
-<li>Systems-based problem solving</li>
-</ul>
-</article>
-</div>
+<p class="section-kicker">Selected contributions, distinguishing established work from initiatives in progress.</p></div>
+<div class="roadmap"><article class="roadmap-card leadership-pillar"><span>01 · Process governance</span><h3>Operational Standards &amp; Process Improvement</h3><ul><li>Partnered with Knowledge &amp; Training to clarify call ownership, transfer criteria, and escalation boundaries.</li><li>Coordinating consolidation of existing ServiceNow guidance into a single ticket-lifecycle reference for new hires (in progress).</li><li>Modernized troubleshooting documentation and vendor handoff templates to improve consistency and escalation readiness.</li></ul></article><article class="roadmap-card leadership-pillar"><span>02 · People development</span><h3>Training &amp; Analyst Development</h3><ul><li>Trained, mentored, or supported 50–60+ analysts across approximately 10–15 onboarding cohorts.</li><li>Developed shadowing materials and refined trainer expectations in collaboration with L2 peers, supervisors, and Knowledge &amp; Training.</li><li>Collaborating on Week 2 trainer-led technology presentations to reinforce Week 1 learning and address topics not encountered during calls (in progress).</li></ul></article><article class="roadmap-card leadership-pillar"><span>03 · Technical coordination</span><h3>Technical Leadership &amp; Cross-Team Coordination</h3><ul><li>Supported complex incident escalations and analyst decision-making across restaurant technology platforms.</li><li>Standardized UK vendor escalation information and ownership boundaries across Acrelec, payment, and other support partners.</li><li>Expanded specialist responsibilities in Macromatix and contributed structured technical workflows and AI-assist guidance.</li></ul></article></div>
 </section>
 <section class="section page" id="cases">
 <div class="section-header">
 <div>
-<div class="section-label">Featured case studies</div>
-<h2 class="section-title">Selected operational contributions</h2>
+<div class="section-label">Evidence and examples</div>
+<h2 class="section-title">Selected contributions and their operational value</h2>
 </div>
 </div>
-<div class="case-grid"><article class="case"><div class="case-title"><span>Current initiative</span><h3>Call ownership &amp; onboarding workflow</h3></div><div class="case-body"><div class="case-column"><h4>Need</h4><p>New hires need consistent guidance on call ownership and end-to-end ticket handling, including scenarios not covered during shadowing.</p></div><div class="case-column"><h4>Contribution</h4><p>Working with Knowledge &amp; Training to standardize ownership rules, coordinating consolidation of the ServiceNow ticket workflow KB, and helping establish trainer-led Week 2 platform presentations.</p></div><div class="case-column"><h4>Status / intended outcome</h4><p>In development. Intended to reinforce Week 1 knowledge, cover missed technology scenarios, and provide analysts with a single ticketing reference.</p></div></div></article>
+<div class="case-grid"><article class="case"><div class="case-title"><span>Current initiative</span><h3>Call ownership &amp; ticketing standards</h3></div><div class="case-body"><div class="case-column"><h4>Operational need</h4><p>Inconsistent call ownership and dispersed ticketing guidance can complicate new-hire decisions.</p></div><div class="case-column"><h4>Contribution</h4><p>Partnered with Knowledge &amp; Training on ownership criteria; overseeing the consolidation of ticket lifecycle guidance into an existing analyst-authored KB.</p></div><div class="case-column"><h4>Value / status</h4><p>Clearer decision criteria are being documented; the consolidated guide remains in development.</p></div></div></article>
 <article class="case">
 <div class="case-title">
 <span>Case Study 01</span>
-<h3>Training standardization</h3>
+<h3>Onboarding and training standardization</h3>
 </div>
 <div class="case-body">
 <div class="case-column">
-<h4>Problem</h4>
-<p>Shadowing and onboarding needed clearer structure, consistent expectations, and stronger trainer alignment.</p>
+<h4>Operational need</h4>
+<p>Training delivery required consistent expectations and reinforcement beyond live-call exposure.</p>
 </div>
 <div class="case-column">
-<h4>Action</h4>
-<p>Created and later restandardized training guide/workflow content with L2 and supervisor feedback.</p>
+<h4>Contribution</h4>
+<p>Developed structured shadowing guidance, aligned revisions with supervisors and trainers, and collaborated on Week 2 platform presentations.</p>
 </div>
 <div class="case-column">
-<h4>Impact</h4>
-<p>Established clearer trainer guidance and a more consistent approach to explaining troubleshooting decisions.</p>
+<h4>Value / status</h4>
+<p>Provided a repeatable foundation for trainer delivery; Week 2 presentation process is in development.</p>
 </div>
 </div>
 </article>
 <article class="case">
 <div class="case-title">
 <span>Case Study 02</span>
-<h3>Chatbot / agent assist</h3>
+<h3>Guided support workflows</h3>
 </div>
 <div class="case-body">
 <div class="case-column">
-<h4>Problem</h4>
-<p>High-volume store-facing issues needed guided workflows that could ask the right questions.</p>
+<h4>Operational need</h4>
+<p>Recurring store-facing issues required consistent questions and troubleshooting decision paths.</p>
 </div>
 <div class="case-column">
-<h4>Action</h4>
-<p>Worked heavily with Bobby to create 10–15 modules for common Annspire and Tracks issues.</p>
+<h4>Contribution</h4>
+<p>Collaborated on approximately 10–15 guided Annspire and Tracks support modules.</p>
 </div>
 <div class="case-column">
-<h4>Impact</h4>
-<p>Produced structured decision flows for common support scenarios.</p>
+<h4>Value / status</h4>
+<p>Translated recurring operational scenarios into structured, reusable workflows.</p>
 </div>
 </div>
 </article>
 <article class="case">
 <div class="case-title">
 <span>Case Study 03</span>
-<h3>Knowledge base modernization</h3>
+<h3>Knowledge management modernization</h3>
 </div>
 <div class="case-body">
 <div class="case-column">
-<h4>Problem</h4>
-<p>Some support areas relied on tribal knowledge, scattered checks, or unclear escalation boundaries.</p>
+<h4>Operational need</h4>
+<p>Fragmented documentation and implicit troubleshooting knowledge increased dependence on individual experience.</p>
 </div>
 <div class="case-column">
-<h4>Action</h4>
-<p>Restructured documentation around issue identification, hardware checks, and handoff quality.</p>
+<h4>Contribution</h4>
+<p>Reorganized knowledge articles around issue identification, verification, resolution criteria, and escalation ownership.</p>
 </div>
 <div class="case-column">
-<h4>Impact</h4>
-<p>Consolidated troubleshooting steps and clarified escalation criteria for analysts.</p>
+<h4>Value / status</h4>
+<p>Produced more navigable references and clearer handoff requirements for analysts.</p>
 </div>
 </div>
 </article>
 <article class="case">
 <div class="case-title">
 <span>Case Study 04</span>
-<h3>UK / vendor escalation cleanup</h3>
+<h3>UK vendor coordination</h3>
 </div>
 <div class="case-body">
 <div class="case-column">
-<h4>Problem</h4>
-<p>Ownership lines across menu changes, kiosk availability, and vendor escalations needed clearer routing.</p>
+<h4>Operational need</h4>
+<p>Cross-vendor support paths and franchise authorization requirements created inconsistent escalation documentation.</p>
 </div>
 <div class="case-column">
-<h4>Action</h4>
-<p>Cleaned up workflows across Acrelec, GlobalPay, Worldpay, Macromatix, and UK menu/kiosk topics.</p>
+<h4>Contribution</h4>
+<p>Refined escalation templates and ownership guidance spanning kiosk, payment, menu, and vendor support.</p>
 </div>
 <div class="case-column">
-<h4>Impact</h4>
-<p>Documented ownership boundaries and standardized information required for vendor escalations.</p>
+<h4>Value / status</h4>
+<p>Established clearer documentation expectations for vendor requests and follow-up.</p>
 </div>
 </div>
 </article>
@@ -1344,8 +1204,8 @@
 <section class="section page" id="work">
 <div class="section-header">
 <div>
-<div class="section-label">Selected work inventory</div>
-<h2 class="section-title">Additional areas of contribution</h2>
+<div class="section-label">Detailed reference</div>
+<h2 class="section-title">Additional projects and technical contributions</h2>
 </div>
 </div>
 <div class="work-grid">
